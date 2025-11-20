@@ -329,11 +329,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
+      "projectUniqueName": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
       "projectName": "ContaCorrente.Application",
-      "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
+      "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
       "packagesPath": "C:\\Users\\seth.sobrinho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\obj\\",
+      "outputPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -354,8 +354,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj": {
-              "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj"
+            "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj": {
+              "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj"
             }
           }
         }

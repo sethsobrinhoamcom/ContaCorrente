@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContaCorrente.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bfe28086eaf84e0a0815aa495f69486019ba041")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df5e42ff7c555448b1026d87e498ade7861fa175")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContaCorrente.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContaCorrente.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

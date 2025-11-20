@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UPTNLRKSAxM=",
+  "dgSpecHash": "b85l8p2MAF4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj",
+  "projectFilePath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\seth.sobrinho\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\seth.sobrinho\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
