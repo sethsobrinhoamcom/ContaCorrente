@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "abupWyOM3iE=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\ContaCorrente.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.11\\microsoft.aspnetcore.openapi.9.0.11.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
