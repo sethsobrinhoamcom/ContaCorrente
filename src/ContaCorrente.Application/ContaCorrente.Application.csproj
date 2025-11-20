@@ -4,8 +4,14 @@
     <ProjectReference Include="..\ContaCorrente.Domain\ContaCorrente.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+  <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentResults" Version="3.15.2" />
+  </ItemGroup>
+
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

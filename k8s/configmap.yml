@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: contacorrente-config
+data:
+  connection-string: "Data Source=/app/data/contacorrente.db"
+  aspnetcore-environment: "Production"

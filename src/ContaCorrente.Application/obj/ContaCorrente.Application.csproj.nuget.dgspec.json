@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj": {}
+    "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj": {
+    "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
+        "projectUniqueName": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
         "projectName": "ContaCorrente.Application",
-        "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
+        "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
         "packagesPath": "C:\\Users\\seth.sobrinho\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\obj\\",
+        "outputPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,98 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj": {
+                "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentResults": {
+              "target": "Package",
+              "version": "[3.15.2, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj",
+        "projectName": "ContaCorrente.Domain",
+        "projectPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj",
+        "packagesPath": "C:\\Users\\seth.sobrinho\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\seth.sobrinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -47,8 +130,8 @@
         "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "imports": [
             "net461",
             "net462",

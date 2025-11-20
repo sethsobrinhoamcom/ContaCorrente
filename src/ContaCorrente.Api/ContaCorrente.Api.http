@@ -1,4 +1,4 @@
-@ContaCorrente.Api_HostAddress = http://localhost:5159
+@ContaCorrente.Api_HostAddress = http://localhost:5058
 
 GET {{ContaCorrente.Api_HostAddress}}/weatherforecast/
 Accept: application/json

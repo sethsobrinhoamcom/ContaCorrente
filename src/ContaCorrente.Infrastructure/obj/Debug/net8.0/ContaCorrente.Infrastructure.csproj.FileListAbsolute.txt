@@ -1,0 +1,15 @@
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\bin\Debug\net8.0\ContaCorrente.Infrastructure.deps.json
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\bin\Debug\net8.0\ContaCorrente.Infrastructure.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\bin\Debug\net8.0\ContaCorrente.Infrastructure.pdb
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\bin\Debug\net8.0\ContaCorrente.Domain.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\bin\Debug\net8.0\ContaCorrente.Domain.pdb
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.AssemblyInfo.cs
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCor.961C8E15.Up2Date
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\refint\ContaCorrente.Infrastructure.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ContaCorrente.Infrastructure.pdb
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Infrastructure\obj\Debug\net8.0\ref\ContaCorrente.Infrastructure.dll

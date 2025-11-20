@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContaCorrente.Api</name>
+    </assembly>
+    <members>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.ObterExtrato(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Obtém o extrato da conta corrente
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,11 @@
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\bin\Debug\net8.0\ContaCorrente.Domain.deps.json
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\bin\Debug\net8.0\ContaCorrente.Domain.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\bin\Debug\net8.0\ContaCorrente.Domain.pdb
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ContaCorrente.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ContaCorrente.Domain.AssemblyInfoInputs.cache
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ContaCorrente.Domain.AssemblyInfo.cs
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ContaCorrente.Domain.csproj.CoreCompileInputs.cache
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ContaCorrente.Domain.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\refint\ContaCorrente.Domain.dll
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ContaCorrente.Domain.pdb
+C:\Users\seth.sobrinho\source\repos\ContaCorrente\src\ContaCorrente.Domain\obj\Debug\net8.0\ref\ContaCorrente.Domain.dll

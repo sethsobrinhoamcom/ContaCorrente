@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "EScl0dwhkKw=",
+  "dgSpecHash": "ANN8wx1RfQ4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\seth.sobrinho\\source\\repos\\ContaCorrente\\src\\ContaCorrente.Application\\ContaCorrente.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.1\\microsoft.extensions.logging.abstractions.6.0.1.nupkg.sha512",
+    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
   "logs": []
 }
