@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\contacorrente.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\contacorrente.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContaCorrenteController.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAgwBwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T03:01:21.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContaCorrente.Api.http",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\ContaCorrente.Api.http",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\ContaCorrente.Api.http",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\ContaCorrente.Api.http",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\ContaCorrente.Api.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-20T02:59:23.352Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

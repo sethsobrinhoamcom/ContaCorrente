@@ -1,10 +1,12 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using ContaCorrente.Api.Models.Request;
+using ContaCorrente.Api.Models.Response;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.CriarContaCorrente;
+using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
+using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarSaque;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Queries.ObterContaCorrente;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Queries.ObterExtrato;
-using ContaCorrente.Api.Models.Response;
-using ContaCorrente.Api.Models.Request;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ContaCorrente.Api.Controllers;
 
@@ -86,5 +88,77 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
 
         return Ok(result.Value);
     }
+    /// <summary>
+    /// Realiza um depósito na conta corrente
+    /// </summary>
+    [HttpPost("{id}/deposito")]
+    [ProducesResponseType(typeof(RealizarDepositoResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> RealizarDeposito(
+        string id,
+        [FromBody] RealizarDepositoRequest request,
+        [FromHeader(Name = "X-Idempotency-Key")] string? chaveIdempotencia = null)
+    {
+        var command = new RealizarDepositoCommand
+        {
+            IdContaCorrente = id,
+            Valor = request.Valor,
+            ChaveIdempotencia = chaveIdempotencia
+        };
+
+        var result = await _mediator.Send(command);
+
+        if (result.IsFailed)
+        {
+            return BadRequest(new { errors = result.Errors.Select(e => e.Message) });
+        }
+
+        return Ok(new RealizarDepositoResponse
+        {
+            IdMovimento = result.Value,
+            Mensagem = "Depósito realizado com sucesso"
+        });
+    }
+
+    /// <summary>
+    /// Realiza um saque da conta corrente
+    /// </summary>
+    [HttpPost("{id}/saque")]
+    [ProducesResponseType(typeof(RealizarSaqueResponse), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> RealizarSaque(
+        string id,
+        [FromBody] RealizarSaqueRequest request,
+        [FromHeader(Name = "X-Idempotency-Key")] string? chaveIdempotencia = null)
+    {
+        var command = new RealizarSaqueCommand
+        {
+            IdContaCorrente = id,
+            Valor = request.Valor,
+            ChaveIdempotencia = chaveIdempotencia
+        };
+
+        var result = await _mediator.Send(command);
+
+        if (result.IsFailed)
+        {
+            return BadRequest(new { errors = result.Errors.Select(e => e.Message) });
+        }
+
+        return Ok(new RealizarSaqueResponse
+        {
+            IdMovimento = result.Value,
+            Mensagem = "Saque realizado com sucesso"
+        });
+    }
+
+    // Request/Response Models
+  
+
+  
+
+   
+
+  
 }
 

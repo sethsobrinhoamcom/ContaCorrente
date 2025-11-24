@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\ContaCorrente.Api"
   ],
+  "SelectedNode": "\\ContaCorrente.sln",
   "PreviewInSolutionExplorer": false
 }

@@ -1,8 +1,9 @@
-﻿using System.Text.Json;
+﻿using ContaCorrente.Domain.Entities;
+using ContaCorrente.Domain.Events;
+using ContaCorrente.Domain.Interfaces;
 using FluentResults;
 using MediatR;
-using ContaCorrente.Domain.Entities;
-using ContaCorrente.Domain.Interfaces;
+using System.Text.Json;
 
 namespace ContaCorrente.Application.UseCases.Transferencias.Commands.RealizarTransferencia;
 
@@ -12,17 +13,19 @@ public class RealizarTransferenciaCommandHandler : IRequestHandler<RealizarTrans
     private readonly ITransferenciaRepository _transferenciaRepository;
     private readonly IIdempotenciaRepository _idempotenciaRepository;
     private readonly ITarifaRepository _tarifaRepository;
-
+    private readonly IEventPublisher _eventPublisher;
     public RealizarTransferenciaCommandHandler(
         IContaCorrenteRepository contaRepository,
         ITransferenciaRepository transferenciaRepository,
         IIdempotenciaRepository idempotenciaRepository,
-        ITarifaRepository tarifaRepository)
+        ITarifaRepository tarifaRepository,
+        IEventPublisher eventPublisher)
     {
         _contaRepository = contaRepository;
         _transferenciaRepository = transferenciaRepository;
         _idempotenciaRepository = idempotenciaRepository;
         _tarifaRepository = tarifaRepository;
+        _eventPublisher = eventPublisher;
     }
 
     public async Task<Result<string>> Handle(RealizarTransferenciaCommand request, CancellationToken cancellationToken)
@@ -136,6 +139,18 @@ public class RealizarTransferenciaCommandHandler : IRequestHandler<RealizarTrans
 
             await _idempotenciaRepository.SalvarAsync(idempotencia);
         }
+
+        var evento = new TransferenciaRealizadaEvent
+        {
+            IdTransferencia = transferencia.IdTransferencia,
+            IdContaCorrenteOrigem = request.IdContaCorrenteOrigem,
+            IdContaCorrenteDestino = request.IdContaCorrenteDestino,
+            Valor = request.Valor,
+            Tarifa = tarifaValor,
+            DataMovimento = DateTime.Now
+        };
+
+        await _eventPublisher.PublishAsync("transferencias", transferencia.IdTransferencia, evento, cancellationToken);
 
         return Result.Ok(transferencia.IdTransferencia);
     }

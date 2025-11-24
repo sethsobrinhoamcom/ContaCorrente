@@ -21,7 +21,7 @@ spec:
         ports:
         - containerPort: 8080
           name: http
-        env:
+      env:
         - name: ASPNETCORE_ENVIRONMENT
           value: "Production"
         - name: ASPNETCORE_URLS
@@ -31,6 +31,21 @@ spec:
             configMapKeyRef:
               name: contacorrente-config
               key: connection-string
+        - name: Kafka__BootstrapServers
+          valueFrom:
+            configMapKeyRef:
+              name: contacorrente-config
+              key: kafka-bootstrap-servers
+        - name: Kafka__ClientId
+          valueFrom:
+            configMapKeyRef:
+              name: contacorrente-config
+              key: kafka-client-id
+        - name: Kafka__ConsumerGroupId
+          valueFrom:
+            configMapKeyRef:
+              name: contacorrente-config
+              key: kafka-consumer-group-id
         resources:
           requests:
             memory: "256Mi"

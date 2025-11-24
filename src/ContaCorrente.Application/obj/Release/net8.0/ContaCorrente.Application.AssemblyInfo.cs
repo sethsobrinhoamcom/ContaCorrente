@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContaCorrente.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bfe28086eaf84e0a0815aa495f69486019ba041")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84e46394101ab032b4efd37202c02bfb08891c40")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContaCorrente.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContaCorrente.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

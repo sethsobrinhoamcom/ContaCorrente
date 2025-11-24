@@ -1,12 +1,13 @@
-using System.Reflection;
-using FluentValidation;
-using MediatR;
 using ContaCorrente.Api.Middleware;
 using ContaCorrente.Domain.Interfaces;
 using ContaCorrente.Domain.Services;
 using ContaCorrente.Infrastructure.Data;
+using ContaCorrente.Infrastructure.Messaging;
 using ContaCorrente.Infrastructure.Repositories;
 using ContaCorrente.Infrastructure.Services;
+using FluentValidation;
+using MediatR;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,7 +73,16 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
+// ... código existente ...
 
+// Kafka
+builder.Services.AddSingleton<IEventPublisher, KafkaEventPublisher>();
+builder.Services.AddHostedService<KafkaEventConsumer>();
+
+// Notification Service
+builder.Services.AddScoped<INotificationService, NotificationService>();
+
+// ... resto do código ...
 var app = builder.Build();
 
 // Initialize Database

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ContaCorrente.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7c6036500dc8ecdd70f79df968e4ed7e3ba589b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84e46394101ab032b4efd37202c02bfb08891c40")]
 [assembly: System.Reflection.AssemblyProductAttribute("ContaCorrente.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ContaCorrente.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

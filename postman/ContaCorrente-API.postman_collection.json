@@ -1,0 +1,208 @@
+{
+  "info": {
+    "name": "Conta Corrente API",
+    "description": "Collection completa da API de Conta Corrente",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Conta Corrente",
+      "item": [
+        {
+          "name": "Criar Conta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numero\": 12345,\n  \"nome\": \"João Silva\",\n  \"senha\": \"senha123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente"]
+            }
+          }
+        },
+        {
+          "name": "Obter Conta",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/{{id_conta}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "{{id_conta}}"]
+            }
+          }
+        },
+        {
+          "name": "Obter Extrato",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/{{id_conta}}/extrato",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "{{id_conta}}", "extrato"]
+            }
+          }
+        },
+        {
+          "name": "Realizar Depósito",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{$guid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"valor\": 100.50\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/{{id_conta}}/deposito",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "{{id_conta}}", "deposito"]
+            }
+          }
+        },
+        {
+          "name": "Realizar Saque",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{$guid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"valor\": 50.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/{{id_conta}}/saque",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "{{id_conta}}", "saque"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Transferência",
+      "item": [
+        {
+          "name": "Realizar Transferência",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{$guid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idContaCorrenteOrigem\": \"{{id_conta_origem}}\",\n  \"idContaCorrenteDestino\": \"{{id_conta_destino}}\",\n  \"valor\": 250.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/transferencia",
+              "host": ["{{base_url}}"],
+              "path": ["api", "transferencia"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kafka Monitoring",
+      "item": [
+        {
+          "name": "Kafka Health",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/health",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "health"]
+            }
+          }
+        },
+        {
+          "name": "List Topics",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/topics",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "topics"]
+            }
+          }
+        },
+        {
+          "name": "Get Topic Info",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/topics/depositos",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "topics", "depositos"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": ["{{base_url}}"],
+          "path": ["health"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "id_conta",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "id_conta_origem",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "id_conta_destino",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

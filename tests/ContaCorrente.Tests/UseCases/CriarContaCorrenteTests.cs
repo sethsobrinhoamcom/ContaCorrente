@@ -7,13 +7,13 @@ using ContaCorrente.Domain.Services;
 
 namespace ContaCorrente.Tests.UseCases;
 
-public class CriarContaCorrenteTests
+public class KafkaIntegrationTests
 {
     private readonly Mock<IContaCorrenteRepository> _repositoryMock;
     private readonly Mock<IPasswordService> _passwordServiceMock;
     private readonly CriarContaCorrenteCommandHandler _handler;
 
-    public CriarContaCorrenteTests()
+    public KafkaIntegrationTests()
     {
         _repositoryMock = new Mock<IContaCorrenteRepository>();
         _passwordServiceMock = new Mock<IPasswordService>();
