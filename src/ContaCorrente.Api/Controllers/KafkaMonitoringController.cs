@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Confluent.Kafka;
-using Confluent.Kafka.Admin;
 
 namespace ContaCorrente.Api.Controllers;
 
@@ -78,18 +77,20 @@ public class KafkaMonitoringController : ControllerBase
 
             var metadata = adminClient.GetMetadata(TimeSpan.FromSeconds(5));
 
-            var topics = metadata.Topics.Select(t => new
-            {
-                name = t.Topic,
-                partitions = t.Partitions.Count,
-                partitionDetails = t.Partitions.Select(p => new
+            var topics = metadata.Topics
+                .Where(t => !t.Topic.StartsWith("__")) // Filtrar tópicos internos
+                .Select(t => new
                 {
-                    id = p.PartitionId,
-                    leader = p.Leader,
-                    replicas = p.Replicas.Length,
-                    isr = p.InSyncReplicas.Length
-                })
-            });
+                    name = t.Topic,
+                    partitions = t.Partitions.Count,
+                    partitionDetails = t.Partitions.Select(p => new
+                    {
+                        id = p.PartitionId,
+                        leader = p.Leader,
+                        replicas = p.Replicas.Length,
+                        isr = p.InSyncReplicas.Length
+                    })
+                });
 
             return Ok(topics);
         }
@@ -151,7 +152,7 @@ public class KafkaMonitoringController : ControllerBase
     /// Lista todos os consumer groups
     /// </summary>
     [HttpGet("consumer-groups")]
-    public async Task<IActionResult> GetConsumerGroups()
+    public IActionResult GetConsumerGroups()
     {
         try
         {
@@ -164,14 +165,14 @@ public class KafkaMonitoringController : ControllerBase
 
             using var adminClient = new AdminClientBuilder(config).Build();
 
-            var groups = await adminClient.ListGroupsAsync(TimeSpan.FromSeconds(10));
+            var groupsResult = adminClient.ListGroups(TimeSpan.FromSeconds(10));
 
-            var result = groups.Select(g => new
+            // Correção: usar List ao invés de Groups
+            var result = groupsResult.ToList().Select(g => new
             {
                 groupId = g.Group,
                 protocol = g.ProtocolType,
-                state = g.State,
-                members = g.Members.Count
+                state = g.State
             });
 
             return Ok(result);
@@ -187,7 +188,7 @@ public class KafkaMonitoringController : ControllerBase
     /// Obtém informações detalhadas de um consumer group
     /// </summary>
     [HttpGet("consumer-groups/{groupId}")]
-    public async Task<IActionResult> GetConsumerGroupInfo(string groupId)
+    public IActionResult GetConsumerGroupInfo(string groupId)
     {
         try
         {
@@ -200,8 +201,10 @@ public class KafkaMonitoringController : ControllerBase
 
             using var adminClient = new AdminClientBuilder(config).Build();
 
-            var groups = await adminClient.ListGroupsAsync(TimeSpan.FromSeconds(10));
-            var group = groups.FirstOrDefault(g => g.Group == groupId);
+            var groupsResult = adminClient.ListGroups(TimeSpan.FromSeconds(10));
+
+            // Correção: usar List ao invés de Groups
+            var group = groupsResult.ToList().FirstOrDefault(g => g.Group == groupId);
 
             if (group == null)
             {
@@ -247,7 +250,6 @@ public class KafkaMonitoringController : ControllerBase
 
             using var consumer = new ConsumerBuilder<string, string>(consumerConfig).Build();
 
-            // Obter metadados dos tópicos
             var adminConfig = new AdminClientConfig
             {
                 BootstrapServers = bootstrapServers
@@ -260,7 +262,6 @@ public class KafkaMonitoringController : ControllerBase
 
             foreach (var topic in metadata.Topics)
             {
-                // Pular tópicos internos do Kafka
                 if (topic.Topic.StartsWith("__"))
                     continue;
 
@@ -277,8 +278,7 @@ public class KafkaMonitoringController : ControllerBase
                         .Select(tp => new
                         {
                             partition = tp.Partition.Value,
-                            offset = tp.Offset.Value,
-                            // Removi o acesso ao Metadata que estava causando erro
+                            offset = tp.Offset.Value
                         })
                         .ToList();
 
@@ -311,7 +311,7 @@ public class KafkaMonitoringController : ControllerBase
     }
 
     /// <summary>
-    /// Obtém lag dos consumer groups (diferença entre produção e consumo)
+    /// Obtém lag dos consumer groups
     /// </summary>
     [HttpGet("consumer-groups/{groupId}/lag")]
     public IActionResult GetConsumerGroupLag(string groupId)

@@ -2,18 +2,6 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "AdminClientHelpers.Confluent.Kafka/1.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Confluent.Kafka": "1.5.2"
-        },
-        "compile": {
-          "lib/netstandard2.1/AdminClientHelpers.Confluent.Kafka.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/AdminClientHelpers.Confluent.Kafka.dll": {}
-        }
-      },
       "Confluent.Kafka/2.12.0": {
         "type": "package",
         "dependencies": {
@@ -1160,18 +1148,6 @@
     }
   },
   "libraries": {
-    "AdminClientHelpers.Confluent.Kafka/1.0.3": {
-      "sha512": "c7qXgfF6LhTwkhooakue6BbmyNDcwZXq5OaQQF1Aa7hhSLQ4OCn5SEZxkTOZcEBjJy+idu9MaBDJq9KZtYxLAA==",
-      "type": "package",
-      "path": "adminclienthelpers.confluent.kafka/1.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "adminclienthelpers.confluent.kafka.1.0.3.nupkg.sha512",
-        "adminclienthelpers.confluent.kafka.nuspec",
-        "lib/netstandard2.1/AdminClientHelpers.Confluent.Kafka.dll"
-      ]
-    },
     "Confluent.Kafka/2.12.0": {
       "sha512": "UAiz9Xogy9Xqo6Y1ogKesH0tzk03ilw5UmwkVMFqZXQvf/1vFyTyVbzed22xS231UP43Z2aib6hzgruErM74lw==",
       "type": "package",
@@ -2831,7 +2807,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "AdminClientHelpers.Confluent.Kafka >= 1.0.3",
+      "Confluent.Kafka >= 2.12.0",
       "ContaCorrente.Application >= 1.0.0",
       "ContaCorrente.Infrastructure >= 1.0.0",
       "FluentValidation.AspNetCore >= 11.3.0",
@@ -2896,9 +2872,9 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
-          "AdminClientHelpers.Confluent.Kafka": {
+          "Confluent.Kafka": {
             "target": "Package",
-            "version": "[1.0.3, )"
+            "version": "[2.12.0, )"
           },
           "FluentValidation.AspNetCore": {
             "target": "Package",

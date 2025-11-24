@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "bDXzD0V7LjU=",
+  "dgSpecHash": "Rn7yjLN2Ne8=",
   "success": true,
   "projectFilePath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\ContaCorrente.Api.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\seth.sobrinho\\.nuget\\packages\\adminclienthelpers.confluent.kafka\\1.0.3\\adminclienthelpers.confluent.kafka.1.0.3.nupkg.sha512",
     "C:\\Users\\seth.sobrinho\\.nuget\\packages\\confluent.kafka\\2.12.0\\confluent.kafka.2.12.0.nupkg.sha512",
     "C:\\Users\\seth.sobrinho\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
     "C:\\Users\\seth.sobrinho\\.nuget\\packages\\fluentresults\\3.15.2\\fluentresults.3.15.2.nupkg.sha512",

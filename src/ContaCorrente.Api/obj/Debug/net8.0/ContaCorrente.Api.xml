@@ -9,5 +9,50 @@
             Obtém o extrato da conta corrente
             </summary>
         </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.RealizarDeposito(System.String,ContaCorrente.Api.Models.Request.RealizarDepositoRequest,System.String)">
+            <summary>
+            Realiza um depósito na conta corrente
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.RealizarSaque(System.String,ContaCorrente.Api.Models.Request.RealizarSaqueRequest,System.String)">
+            <summary>
+            Realiza um saque da conta corrente
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetKafkaHealth">
+            <summary>
+            Verifica a saúde do Kafka
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetTopics">
+            <summary>
+            Lista todos os tópicos do Kafka
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetTopicInfo(System.String)">
+            <summary>
+            Obtém informações de um tópico específico
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetConsumerGroups">
+            <summary>
+            Lista todos os consumer groups
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetConsumerGroupInfo(System.String)">
+            <summary>
+            Obtém informações detalhadas de um consumer group
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetConsumerGroupOffsets(System.String)">
+            <summary>
+            Obtém offsets dos consumer groups
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetConsumerGroupLag(System.String)">
+            <summary>
+            Obtém lag dos consumer groups
+            </summary>
+        </member>
     </members>
 </doc>

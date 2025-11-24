@@ -1,67 +1,163 @@
-# 🏦 Conta Corrente API
+# 🏦 Conta Corrente API - Sistema Bancário Completo
 
-API REST para gerenciamento de contas correntes e transferências bancárias, desenvolvida com .NET 8, seguindo princípios de Clean Architecture e CQRS.
+API REST para gerenciamento de contas correntes com operações bancárias (depósito, saque, transferência), desenvolvida com .NET 8, Clean Architecture, CQRS e processamento assíncrono com Apache Kafka.
 
 ## 📋 Índice
 
+- [Visão Geral](#visão-geral)
+- [Funcionalidades](#funcionalidades)
 - [Tecnologias](#tecnologias)
 - [Arquitetura](#arquitetura)
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Executando a Aplicação](#executando-a-aplicação)
-- [Executando com Docker](#executando-com-docker)
-- [Executando com Kubernetes](#executando-com-kubernetes)
-- [Testes](#testes)
+- [Docker e Kubernetes](#docker-e-kubernetes)
+- [Kafka](#kafka)
 - [Endpoints da API](#endpoints-da-api)
-- [Idempotência](#idempotência)
-- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Testes](#testes)
+- [Monitoramento](#monitoramento)
+
+## 🎯 Visão Geral
+
+Sistema bancário que permite:
+- ✅ Criação e gerenciamento de contas correntes
+- ✅ Operações de depósito, saque e transferência
+- ✅ Consulta de saldo e extrato
+- ✅ Sistema de tarifas automáticas
+- ✅ Idempotência para operações críticas
+- ✅ Processamento assíncrono de eventos com Kafka
+- ✅ Monitoramento e observabilidade
+
+## ⚡ Funcionalidades
+
+### Operações Bancárias
+- **Criar Conta Corrente**: Cadastro de novas contas com senha criptografada
+- **Depósito**: Crédito em conta (limite: R$ 10.000 por operação)
+- **Saque**: Débito em conta com tarifa de R$ 0,50
+- **Transferência**: Entre contas com tarifa de R$ 1,00
+- **Extrato**: Consulta de movimentações com filtros de período
+- **Saldo**: Consulta de saldo atualizado
+
+### Recursos Técnicos
+- **Idempotência**: Prevenção de operações duplicadas via `X-Idempotency-Key`
+- **Eventos Assíncronos**: Publicação no Kafka para cada operação
+- **Validações**: FluentValidation com regras de negócio
+- **Auditoria**: Logs de todas as operações
+- **Health Checks**: Endpoints para monitoramento
 
 ## 🚀 Tecnologias
 
+### Backend
 - **.NET 8** - Framework principal
 - **C# 12** - Linguagem de programação
+- **ASP.NET Core** - Web API
 - **SQLite** - Banco de dados
-- **Dapper** - Micro ORM
-- **MediatR** - Implementação do padrão CQRS
+- **Dapper** - Micro ORM para acesso a dados
+- **MediatR** - CQRS pattern
 - **FluentValidation** - Validação de dados
 - **FluentResults** - Tratamento de resultados
-- **Swagger/OpenAPI** - Documentação da API
+
+### Mensageria
+- **Apache Kafka** - Message broker
+- **Confluent.Kafka** - Cliente .NET para Kafka
+- **Zookeeper** - Coordenação do Kafka
+
+### Infraestrutura
 - **Docker** - Containerização
-- **Kubernetes** - Orquestração de containers
+- **Docker Compose** - Orquestração local
+- **Kubernetes** - Orquestração em produção
+- **Kafka UI** - Interface web para Kafka
+
+### Testes
 - **xUnit** - Framework de testes
 - **Moq** - Mock para testes
-- **FluentAssertions** - Assertions para testes
+- **FluentAssertions** - Assertions expressivas
 
 ## 🏛️ Arquitetura
 
-O projeto segue os princípios de **Clean Architecture** e **CQRS**:
+### Clean Architecture + CQRS
 ```
-src/
-├── ContaCorrente.Api/           # Camada de apresentação (Controllers, Middleware)
-├── ContaCorrente.Application/   # Camada de aplicação (Use Cases, DTOs)
-├── ContaCorrente.Domain/        # Camada de domínio (Entidades, Interfaces)
-└── ContaCorrente.Infrastructure/ # Camada de infraestrutura (Repositórios, DB)
+┌─────────────────────────────────────────────────────────┐
+│                    API Layer (Controllers)               │
+│  - ContaCorrenteController                              │
+│  - TransferenciaController                              │
+│  - KafkaMonitoringController                            │
+└───────────────────┬─────────────────────────────────────┘
+                    │
+┌───────────────────▼─────────────────────────────────────┐
+│              Application Layer (CQRS)                    │
+│  Commands:                      Queries:                │
+│  - CriarContaCorrente          - ObterContaCorrente    │
+│  - RealizarDeposito            - ObterExtrato          │
+│  - RealizarSaque                                        │
+│  - RealizarTransferencia                                │
+└───────────────────┬─────────────────────────────────────┘
+                    │
+┌───────────────────▼─────────────────────────────────────┐
+│                 Domain Layer                             │
+│  - Entities (ContaCorrente, Movimento, etc)             │
+│  - Events (DepositoRealizadoEvent, etc)                 │
+│  - Interfaces (Repositories, Services)                  │
+└───────────────────┬─────────────────────────────────────┘
+                    │
+┌───────────────────▼─────────────────────────────────────┐
+│            Infrastructure Layer                          │
+│  - Repositories (Dapper + SQLite)                       │
+│  - KafkaEventPublisher                                  │
+│  - KafkaEventConsumer                                   │
+│  - PasswordService                                      │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### Padrões Utilizados
-
-- **CQRS** (Command Query Responsibility Segregation)
-- **Repository Pattern**
-- **Mediator Pattern**
-- **Dependency Injection**
-- **Unit of Work** (implícito via transações)
+### Fluxo de Eventos com Kafka
+```
+┌──────────────┐       ┌──────────┐       ┌─────────────────┐
+│   API POST   │──────▶│  Command │──────▶│   Repository    │
+│   /deposito  │       │  Handler │       │   (SQLite)      │
+└──────────────┘       └────┬─────┘       └─────────────────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ EventPublisher│
+                    │    (Kafka)    │
+                    └───────┬───────┘
+                            │
+                ┌───────────┼───────────┐
+                ▼           ▼           ▼
+         ┌──────────┐ ┌──────────┐ ┌──────────┐
+         │depositos │ │  saques  │ │transferen│
+         │  topic   │ │  topic   │ │cias topic│
+         └─────┬────┘ └─────┬────┘ └─────┬────┘
+               │            │            │
+               └────────────┼────────────┘
+                            ▼
+                    ┌───────────────┐
+                    │EventConsumer  │
+                    │(Background)   │
+                    └───────┬───────┘
+                            │
+                ┌───────────┼───────────┐
+                ▼           ▼           ▼
+         ┌──────────┐ ┌──────────┐ ┌──────────┐
+         │Analytics │ │Notificação│ │  Logs   │
+         └──────────┘ └──────────┘ └──────────┘
+```
 
 ## 📦 Pré-requisitos
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (opcional)
-- [kubectl](https://kubernetes.io/docs/tasks/tools/) (opcional)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Git](https://git-scm.com/)
+
+**Opcional:**
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [Postman](https://www.postman.com/downloads/)
 
 ## 💻 Instalação
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/sethsobrinhoamcom/contacorrente-api.git
+git clone https://github.com/seu-usuario/contacorrente-api.git
 cd contacorrente-api
 ```
 
@@ -77,130 +173,193 @@ dotnet build
 
 ## ▶️ Executando a Aplicação
 
-### Modo Development
+### Opção 1: Executar Localmente (sem Kafka)
 ```bash
 cd src/ContaCorrente.Api
 dotnet run
 ```
 
-A API estará disponível em:
-- HTTP: `http://localhost:5000`
-- HTTPS: `https://localhost:5001`
-- Swagger UI: `http://localhost:5000` ou `https://localhost:5001`
+Acesse: `http://localhost:5000`
 
-### Variáveis de Ambiente
+### Opção 2: Docker Compose (RECOMENDADO)
 ```bash
-# Connection String
-export ConnectionStrings__DefaultConnection="Data Source=contacorrente.db"
-
-# Environment
-export ASPNETCORE_ENVIRONMENT="Development"
-```
-
-## 🐳 Executando com Docker
-
-### Build da imagem
-```bash
-docker build -t contacorrente-api:latest .
-```
-
-### Executar container
-```bash
-docker run -d \
-  --name contacorrente-api \
-  -p 5000:8080 \
-  -e ConnectionStrings__DefaultConnection="Data Source=/app/data/contacorrente.db" \
-  -v contacorrente-data:/app/data \
-  contacorrente-api:latest
-```
-
-### Usando Docker Compose
-```bash
-# Iniciar
+# Iniciar todos os serviços
 docker-compose up -d
 
 # Ver logs
-docker-compose logs -f
+docker-compose logs -f contacorrente-api
 
 # Parar
 docker-compose down
-
-# Parar e remover volumes
-docker-compose down -v
 ```
 
-Acesse: `http://localhost:5000`
+**Serviços disponíveis:**
+- API: `http://localhost:5000`
+- Swagger: `http://localhost:5000`
+- Kafka UI: `http://localhost:8080`
 
-## ☸️ Executando com Kubernetes
-
-### Pré-requisitos
-
-Certifique-se de ter o Kubernetes rodando (Docker Desktop, Minikube, etc.)
-
-### 1. Habilitar Kubernetes no Docker Desktop
-
-1. Abra Docker Desktop
-2. Settings > Kubernetes
-3. Marque "Enable Kubernetes"
-4. Apply & Restart
-
-### 2. Build da imagem
+### Opção 3: Kubernetes
 ```bash
+# 1. Build da imagem
 docker build -t contacorrente-api:latest .
-```
 
-### 3. Deploy no Kubernetes
-```bash
-# Aplicar todos os manifestos
+# 2. Deploy completo (Kafka + API)
 kubectl apply -f k8s/
 
-# OU aplicar individualmente
-kubectl apply -f k8s/configmap.yaml
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
-kubectl apply -f k8s/hpa.yaml
-```
-
-### 4. Verificar o deployment
-```bash
-# Ver pods
+# 3. Verificar pods
 kubectl get pods
 
-# Ver services
-kubectl get services
-
-# Ver deployments
-kubectl get deployments
-
-# Ver detalhes do pod
-kubectl describe pod <pod-name>
-
-# Ver logs
-kubectl logs <pod-name>
-```
-
-### 5. Acessar a aplicação
-```bash
-# Obter a URL do serviço
-kubectl get service contacorrente-service
-
-# Se estiver usando LoadBalancer local
-# Acesse: http://localhost
-```
-
-### 6. Comandos úteis do Kubernetes
-```bash
-# Port forward para acessar localmente
+# 4. Port forward
 kubectl port-forward service/contacorrente-service 5000:80
 
-# Escalar manualmente
-kubectl scale deployment contacorrente-api --replicas=5
+# 5. Acessar
+open http://localhost:5000
+```
 
-# Ver HPA status
-kubectl get hpa
+## 🔥 Kafka
 
-# Deletar tudo
-kubectl delete -f k8s/
+### Tópicos Criados Automaticamente
+
+- **depositos**: Eventos de depósito
+- **saques**: Eventos de saque
+- **transferencias**: Eventos de transferência
+
+### Acessar Kafka UI
+```bash
+# Com Docker Compose
+open http://localhost:8080
+```
+
+### Comandos Úteis do Kafka
+```bash
+# Listar tópicos
+docker exec kafka kafka-topics --list --bootstrap-server localhost:9092
+
+# Ver mensagens de um tópico
+docker exec kafka kafka-console-consumer \
+  --topic depositos \
+  --bootstrap-server localhost:9092 \
+  --from-beginning
+
+# Criar tópico manualmente
+docker exec kafka kafka-topics \
+  --create \
+  --topic novo-topico \
+  --bootstrap-server localhost:9092 \
+  --partitions 3 \
+  --replication-factor 1
+
+# Descrever tópico
+docker exec kafka kafka-topics \
+  --describe \
+  --topic depositos \
+  --bootstrap-server localhost:9092
+
+# Ver consumer groups
+docker exec kafka kafka-consumer-groups \
+  --list \
+  --bootstrap-server localhost:9092
+
+# Ver lag do consumer group
+docker exec kafka kafka-consumer-groups \
+  --describe \
+  --group contacorrente-consumer-group \
+  --bootstrap-server localhost:9092
+```
+
+## 📚 Endpoints da API
+
+### Conta Corrente
+
+#### Criar Conta
+```http
+POST /api/contacorrente
+Content-Type: application/json
+
+{
+  "numero": 12345,
+  "nome": "João Silva",
+  "senha": "senha123"
+}
+```
+
+#### Obter Conta
+```http
+GET /api/contacorrente/{id}
+```
+
+#### Realizar Depósito
+```http
+POST /api/contacorrente/{id}/deposito
+Content-Type: application/json
+X-Idempotency-Key: unique-key-123
+
+{
+  "valor": 500.00
+}
+```
+
+#### Realizar Saque
+```http
+POST /api/contacorrente/{id}/saque
+Content-Type: application/json
+X-Idempotency-Key: unique-key-456
+
+{
+  "valor": 100.00
+}
+```
+
+#### Obter Extrato
+```http
+GET /api/contacorrente/{id}/extrato?dataInicio=2024-01-01&dataFim=2024-12-31
+```
+
+### Transferência
+
+#### Realizar Transferência
+```http
+POST /api/transferencia
+Content-Type: application/json
+X-Idempotency-Key: unique-key-789
+
+{
+  "idContaCorrenteOrigem": "origem-id",
+  "idContaCorrenteDestino": "destino-id",
+  "valor": 250.00
+}
+```
+
+### Monitoramento Kafka
+
+#### Kafka Health
+```http
+GET /api/kafkamonitoring/health
+```
+
+#### Listar Tópicos
+```http
+GET /api/kafkamonitoring/topics
+```
+
+#### Info de Tópico
+```http
+GET /api/kafkamonitoring/topics/depositos
+```
+
+#### Listar Consumer Groups
+```http
+GET /api/kafkamonitoring/consumer-groups
+```
+
+#### Lag do Consumer Group
+```http
+GET /api/kafkamonitoring/consumer-groups/contacorrente-consumer-group/lag
+```
+
+### Health Check
+```http
+GET /health
 ```
 
 ## 🧪 Testes
@@ -217,326 +376,129 @@ dotnet test --collect:"XPlat Code Coverage"
 
 ### Executar testes específicos
 ```bash
-dotnet test --filter "FullyQualifiedName~CriarContaCorrenteTests"
+# Testes de depósito
+dotnet test --filter "FullyQualifiedName~RealizarDepositoTests"
+
+# Testes de saque
+dotnet test --filter "FullyQualifiedName~RealizarSaqueTests"
+
+# Testes de transferência
+dotnet test --filter "FullyQualifiedName~RealizarTransferenciaTests"
 ```
 
-### Ver relatório de cobertura
+### Teste End-to-End
 ```bash
-# Instalar ferramenta (uma vez)
-dotnet tool install -g dotnet-reportgenerator-globaltool
-
-# Gerar relatório
-reportgenerator \
-  -reports:"**/coverage.cobertura.xml" \
-  -targetdir:"coveragereport" \
-  -reporttypes:Html
-
-# Abrir relatório
-open coveragereport/index.html  # macOS
-start coveragereport/index.html # Windows
-xdg-open coveragereport/index.html # Linux
+chmod +x scripts/e2e-test.sh
+./scripts/e2e-test.sh
 ```
 
-## 📚 Endpoints da API
-
-### Conta Corrente
-
-#### Criar Conta Corrente
-```http
-POST /api/contacorrente
-Content-Type: application/json
-
-{
-  "numero": 12345,
-  "nome": "João Silva",
-  "senha": "senha123"
-}
-```
-
-**Resposta (201 Created):**
-```json
-{
-  "idContaCorrente": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
-}
-```
-
-#### Obter Conta Corrente
-```http
-GET /api/contacorrente/{id}
-```
-
-**Resposta (200 OK):**
-```json
-{
-  "idContaCorrente": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-  "numero": 12345,
-  "nome": "João Silva",
-  "ativo": true,
-  "saldo": 1000.50
-}
-```
-
-#### Obter Extrato
-```http
-GET /api/contacorrente/{id}/extrato?dataInicio=2024-01-01&dataFim=2024-12-31
-```
-
-**Resposta (200 OK):**
-```json
-[
-  {
-    "idMovimento": "550e8400-e29b-41d4-a716-446655440000",
-    "dataMovimento": "19/11/2024 10:30:00",
-    "tipoMovimento": "C",
-    "valor": 500.00
-  },
-  {
-    "idMovimento": "660e8400-e29b-41d4-a716-446655440000",
-    "dataMovimento": "19/11/2024 14:45:00",
-    "tipoMovimento": "D",
-    "valor": 100.00
-  }
-]
-```
-
-### Transferência
-
-#### Realizar Transferência
-```http
-POST /api/transferencia
-Content-Type: application/json
-X-Idempotency-Key: 123e4567-e89b-12d3-a456-426614174000
-
-{
-  "idContaCorrenteOrigem": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
-  "idContaCorrenteDestino": "a37bc10b-48cc-5372-b567-1e02c2c3d489",
-  "valor": 250.00
-}
-```
-
-**Resposta (200 OK):**
-```json
-{
-  "idTransferencia": "770e8400-e29b-41d4-a716-446655440000",
-  "mensagem": "Transferência realizada com sucesso"
-}
-```
-
-### Health Check
-```http
-GET /health
-```
-
-**Resposta (200 OK):**
-```json
-{
-  "status": "Healthy",
-  "timestamp": "2024-11-19T15:30:00Z",
-  "version": "1.0.0"
-}
-```
-
-## 🔐 Idempotência
-
-A API suporta idempotência em operações de transferência através do header `X-Idempotency-Key`.
-
-### Como funciona
-
-1. Cliente envia uma requisição com uma chave única no header
-2. API processa e armazena o resultado
-3. Requisições subsequentes com a mesma chave retornam o resultado armazenado
-
-### Exemplo
+### Teste do Kafka
 ```bash
-# Primeira requisição
-curl -X POST http://localhost:5000/api/transferencia \
-  -H "Content-Type: application/json" \
-  -H "X-Idempotency-Key: minha-chave-unica-123" \
-  -d '{
-    "idContaCorrenteOrigem": "origem-id",
-    "idContaCorrenteDestino": "destino-id",
-    "valor": 100.00
-  }'
-
-# Segunda requisição (retorna o mesmo resultado sem processar novamente)
-curl -X POST http://localhost:5000/api/transferencia \
-  -H "Content-Type: application/json" \
-  -H "X-Idempotency-Key: minha-chave-unica-123" \
-  -d '{
-    "idContaCorrenteOrigem": "origem-id",
-    "idContaCorrenteDestino": "destino-id",
-    "valor": 100.00
-  }'
+chmod +x scripts/test-kafka.sh
+./scripts/test-kafka.sh
 ```
-
-## 📁 Estrutura do Projeto
-```
-ContaCorrente.Api/
-├── src/
-│   ├── ContaCorrente.Api/
-│   │   ├── Controllers/
-│   │   │   ├── ContaCorrenteController.cs
-│   │   │   ├── TransferenciaController.cs
-│   │   │   └── HealthController.cs
-│   │   ├── Middleware/
-│   │   │   ├── ExceptionHandlingMiddleware.cs
-│   │   │   └── ValidationBehavior.cs
-|   |   ├── Models
-|   |   |   ├── Request
-|   |   |   |   ├── 
-|   |   |   ├── Response
-│   │   ├── Program.cs
-│   │   └── appsettings.json
-│   │
-│   ├── ContaCorrente.Application/
-│   │   ├── DTOs/
-│   │   ├── UseCases/
-│   │   │   ├── ContasCorrentes/
-│   │   │   │   ├── Commands/
-│   │   │   │   └── Queries/
-│   │   │   └── Transferencias/
-│   │   │       └── Commands/
-│   │
-│   ├── ContaCorrente.Domain/
-│   │   ├── Entities/
-│   │   ├── Interfaces/
-│   │   └── Services/
-│   │
-│   └── ContaCorrente.Infrastructure/
-│       ├── Data/
-│       ├── Repositories/
-│       └── Services/
-│
-├── tests/
-│   └── ContaCorrente.Tests/
-│       └── UseCases/
-│
-├── k8s/
-│   ├── configmap.yaml
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   └── hpa.yaml
-│
-├── scripts/
-│   ├── build-and-push.sh
-│   ├── deploy-k8s.sh
-│   └── test.sh
-│
-├── docker-compose.yml
-├── Dockerfile
-├── .dockerignore
-├── .gitignore
-└── README.md
-```
-
-## 🔧 Configuração
-
-### appsettings.json
-```json
-{
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "ConnectionStrings": {
-    "DefaultConnection": "Data Source=contacorrente.db"
-  }
-}
-```
-
-### Variáveis de Ambiente
-
-| Variável | Descrição | Padrão |
-|----------|-----------|--------|
-| `ASPNETCORE_ENVIRONMENT` | Ambiente de execução | `Development` |
-| `ASPNETCORE_URLS` | URLs de binding | `http://+:8080` |
-| `ConnectionStrings__DefaultConnection` | String de conexão SQLite | `Data Source=contacorrente.db` |
 
 ## 📊 Monitoramento
 
-### Métricas do Kubernetes
+### Logs da Aplicação
 ```bash
-# CPU e Memória dos pods
-kubectl top pods
-
-# Status do HPA
-kubectl get hpa contacorrente-hpa
-
-# Eventos
-kubectl get events --sort-by=.metadata.creationTimestamp
-```
-
-### Logs
-```bash
-# Docker
-docker logs contacorrente-api -f
+# Docker Compose
+docker-compose logs -f contacorrente-api
 
 # Kubernetes
 kubectl logs -f deployment/contacorrente-api
-
-# Docker Compose
-docker-compose logs -f
 ```
+
+### Métricas do Kafka
+
+Acesse Kafka UI: `http://localhost:8080`
+
+### Healthchecks
+```bash
+# API Health
+curl http://localhost:5000/health
+
+# Kafka Health
+curl http://localhost:5000/api/kafkamonitoring/health
+```
+
+## 🔒 Segurança
+
+- ✅ Senhas criptografadas com SHA256 + Salt
+- ✅ Idempotência para prevenir operações duplicadas
+- ✅ Validações de entrada com FluentValidation
+- ✅ Tratamento global de exceções
+- ✅ Logs de auditoria
+
+## 📈 Performance
+
+- **SQLite**: Banco de dados leve e rápido
+- **Dapper**: ORM de alta performance
+- **Kafka**: Processamento assíncrono
+- **CQRS**: Separação de leitura e escrita
+- **Connection Pooling**: Reutilização de conexões
 
 ## 🐛 Troubleshooting
 
-### Problema: Porta já em uso
+### Kafka não inicia
 ```bash
-# Verificar processo usando a porta
-lsof -i :5000  # macOS/Linux
-netstat -ano | findstr :5000  # Windows
-
-# Matar processo
-kill -9 <PID>  # macOS/Linux
-taskkill /PID <PID> /F  # Windows
-```
-
-### Problema: Banco de dados locked
-```bash
-# Remover arquivo de lock
-rm contacorrente.db-shm
-rm contacorrente.db-wal
-```
-
-### Problema: Imagem Docker não atualiza
-```bash
-# Rebuild sem cache
-docker build --no-cache -t contacorrente-api:latest .
-
-# Limpar imagens antigas
-docker image prune -a
-```
-
-### Problema: Pods não iniciam no Kubernetes
-```bash
-# Verificar eventos
-kubectl describe pod <pod-name>
-
 # Verificar logs
-kubectl logs <pod-name>
+docker-compose logs kafka
 
-# Forçar recriação
-kubectl rollout restart deployment/contacorrente-api
+# Reiniciar serviços
+docker-compose down
+docker-compose up -d
 ```
 
-## 🤝 Contribuindo
+### API não conecta ao Kafka
+
+Verifique o `appsettings.json`:
+```json
+{
+  "Kafka": {
+    "BootstrapServers": "localhost:9092"  // ou "kafka:29092" no Docker
+  }
+}
+```
+
+### Banco de dados corrompido
+```bash
+# Parar API
+docker-compose stop contacorrente-api
+
+# Remover banco
+docker volume rm contacorrente_contacorrente-data
+
+# Reiniciar
+docker-compose up -d
+```
+
+## 📝 Estrutura de Tarifas
+
+| Operação      | Tarifa   |
+|---------------|----------|
+| Depósito      | Grátis   |
+| Saque         | R$ 0,50  |
+| Transferência | R$ 1,00  |
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
+
+## 👥 Contribuindo
 
 1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
+2. Crie uma branch (`git checkout -b feature/NovaFuncionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
 5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👥 Autores
-
-- **Seth Sobrinho** - [GitHub](https://github.com/sethsobrinhoamcom)
 
 ## 📞 Contato
 
-- Email: seth.sobrinho@amcom.com.br
+- Email: seu.email@example.com
+- LinkedIn: [seu-perfil](https://linkedin.com/in/seu-perfil)
+- GitHub: [@seu-usuario](https://github.com/seu-usuario)
+
+---
+
+**Desenvolvido com ❤️ usando .NET 8 e Apache Kafka**

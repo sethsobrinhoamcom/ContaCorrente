@@ -3,8 +3,124 @@
   "WorkspaceRootPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\controllers\\kafkamonitoringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\controllers\\kafkamonitoringcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\infrastructure\\kafkaeventpublishertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\infrastructure\\kafkaeventpublishertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\realizarsaquetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizarsaquetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\realizardepositotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizardepositotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\integration\\kafkaintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\integration\\kafkaintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\criarcontacorrentetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\criarcontacorrentetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:k8s\\deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\configmap.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:k8s\\configmap.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\kafka-deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:k8s\\kafka-deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\kafkaeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\messaging\\kafkaeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\kafkaeventpublisher .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\messaging\\kafkaeventpublisher .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\models\\response\\realizarsaqueresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\models\\response\\realizarsaqueresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\transferencias\\commands\\realizartransferencia\\realizartransferenciacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\transferencias\\commands\\realizartransferencia\\realizartransferenciacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizardeposito\\realizardepositocommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizardeposito\\realizardepositocommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizardeposito\\realizardepositocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizardeposito\\realizardepositocommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizardeposito\\realizardepositocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizardeposito\\realizardepositocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.domain\\events\\transferenciarealizadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|solutionrelative:src\\contacorrente.domain\\events\\transferenciarealizadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.domain\\interfaces\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|solutionrelative:src\\contacorrente.domain\\interfaces\\ieventpublisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.domain\\events\\saquerealizadoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|solutionrelative:src\\contacorrente.domain\\events\\saquerealizadoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.domain\\events\\contacorrentecriadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|solutionrelative:src\\contacorrente.domain\\events\\contacorrentecriadaevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.domain\\events\\depositorealizadoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|solutionrelative:src\\contacorrente.domain\\events\\depositorealizadoevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\contacorrente.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
@@ -18,24 +134,401 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\README.md*",
+              "RelativeToolTip": "README.md*",
+              "ViewState": "AgIAANsBAAAAAAAAAAAgwPcBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-24T04:25:01.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KafkaMonitoringController.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\KafkaMonitoringController.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\KafkaMonitoringController.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\KafkaMonitoringController.cs*",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\Controllers\\KafkaMonitoringController.cs*",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAIwKoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:59:03.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\docker-compose.yml*",
+              "RelativeToolTip": "docker-compose.yml*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwGcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-24T03:39:25.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KafkaEventPublisherTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\Infrastructure\\KafkaEventPublisherTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\Infrastructure\\KafkaEventPublisherTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\Infrastructure\\KafkaEventPublisherTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\Infrastructure\\KafkaEventPublisherTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:55:49.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RealizarSaqueTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarSaqueTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\RealizarSaqueTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarSaqueTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\RealizarSaqueTests.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAUwKYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:55:00.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RealizarDepositoTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAUwIsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:54:18.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KafkaIntegrationTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\Integration\\KafkaIntegrationTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\Integration\\KafkaIntegrationTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\Integration\\KafkaIntegrationTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\Integration\\KafkaIntegrationTests.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAIwGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:46:07.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CriarContaCorrenteTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:45:43.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "deployment.yml",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\deployment.yml",
+              "RelativeDocumentMoniker": "k8s\\deployment.yml",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\deployment.yml",
+              "RelativeToolTip": "k8s\\deployment.yml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwBcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-24T03:42:27.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "configmap.yml",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\configmap.yml",
+              "RelativeDocumentMoniker": "k8s\\configmap.yml",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\configmap.yml",
+              "RelativeToolTip": "k8s\\configmap.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-24T03:42:09.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "kafka-deployment.yml",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\kafka-deployment.yml",
+              "RelativeDocumentMoniker": "k8s\\kafka-deployment.yml",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\kafka-deployment.yml",
+              "RelativeToolTip": "k8s\\kafka-deployment.yml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAUwFUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-24T03:41:45.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\appsettings.json",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T03:38:32.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "KafkaEventConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "ViewState": "AgIAAMQAAAAAAAAAAAAIwO4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:36:54.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Program.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\Program.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:33:55.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Services\\NotificationService.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:33:31.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "KafkaEventPublisher .cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventPublisher .cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventPublisher .cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventPublisher .cs",
+              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventPublisher .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:11:01.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RealizarSaqueResponse.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\RealizarSaqueResponse.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Response\\RealizarSaqueResponse.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\RealizarSaqueResponse.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\Models\\Response\\RealizarSaqueResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:27:07.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ContaCorrenteController.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
               "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
               "RelativeToolTip": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAgwBwAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAmwH4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T03:01:21.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 18,
+              "Title": "RealizarTransferenciaCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandHandler.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandHandler.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandHandler.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAIwJgAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:21:27.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RealizarSaqueCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandValidator.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandValidator.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:18:41.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "RealizarSaqueCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandHandler.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandHandler.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandHandler.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAUwH0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:18:37.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RealizarSaqueCommand.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommand.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommand.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommand.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:18:33.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RealizarDepositoCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandValidator.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandValidator.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandValidator.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:16:03.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RealizarDepositoCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandHandler.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandHandler.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandHandler.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAUwFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:15:59.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RealizarDepositoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommand.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommand.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommand.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:15:53.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IEventPublisher.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Interfaces\\IEventPublisher.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Interfaces\\IEventPublisher.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Interfaces\\IEventPublisher.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Domain\\Interfaces\\IEventPublisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:09:55.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "TransferenciaRealizadaEvent.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\TransferenciaRealizadaEvent.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Events\\TransferenciaRealizadaEvent.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\TransferenciaRealizadaEvent.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Domain\\Events\\TransferenciaRealizadaEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:09:01.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SaqueRealizadoEvent.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\SaqueRealizadoEvent.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Events\\SaqueRealizadoEvent.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\SaqueRealizadoEvent.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Domain\\Events\\SaqueRealizadoEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:08:38.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DepositoRealizadoEvent.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\DepositoRealizadoEvent.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Events\\DepositoRealizadoEvent.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\DepositoRealizadoEvent.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Domain\\Events\\DepositoRealizadoEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:07:56.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ContaCorrenteCriadaEvent.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\ContaCorrenteCriadaEvent.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Events\\ContaCorrenteCriadaEvent.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Events\\ContaCorrenteCriadaEvent.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Domain\\Events\\ContaCorrenteCriadaEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:07:31.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
               "Title": "ContaCorrente.Api.http",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\ContaCorrente.Api.http",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\ContaCorrente.Api.http",
@@ -43,7 +536,8 @@
               "RelativeToolTip": "src\\ContaCorrente.Api\\ContaCorrente.Api.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-11-20T02:59:23.352Z"
+              "WhenOpened": "2025-11-20T02:59:23.352Z",
+              "EditorCaption": ""
             }
           ]
         }
