@@ -1,5 +1,7 @@
 ﻿using ContaCorrente.Domain.Entities;
+using ContaCorrente.Domain.Enums;
 using ContaCorrente.Domain.Events;
+using ContaCorrente.Domain.Exceptions;
 using ContaCorrente.Domain.Interfaces;
 using FluentResults;
 using MediatR;
@@ -48,7 +50,7 @@ public class RealizarTransferenciaCommandHandler : IRequestHandler<RealizarTrans
 
         if (!contaOrigem.Ativo)
         {
-            return Result.Fail<string>("Conta de origem está inativa");
+            throw new DomainException("Apenas contas correntes ativas podem realizar transferências", ErrorType.INACTIVE_ACCOUNT);
         }
 
         var contaDestino = await _contaRepository.ObterPorIdAsync(request.IdContaCorrenteDestino);
@@ -59,10 +61,10 @@ public class RealizarTransferenciaCommandHandler : IRequestHandler<RealizarTrans
 
         if (!contaDestino.Ativo)
         {
-            return Result.Fail<string>("Conta de destino está inativa");
+            throw new DomainException("Conta de destino está inativa", ErrorType.INACTIVE_ACCOUNT);
         }
 
-       
+
         var saldoOrigem = await _contaRepository.ObterSaldoAsync(request.IdContaCorrenteOrigem);
         var tarifaValor = 1.00m; 
         var valorTotal = request.Valor + tarifaValor;
@@ -151,7 +153,6 @@ public class RealizarTransferenciaCommandHandler : IRequestHandler<RealizarTrans
         };
 
         await _eventPublisher.PublishAsync("transferencias", transferencia.IdTransferencia, evento, cancellationToken);
-
         return Result.Ok(transferencia.IdTransferencia);
     }
 }

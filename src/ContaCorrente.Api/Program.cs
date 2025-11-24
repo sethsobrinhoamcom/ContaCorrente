@@ -1,26 +1,58 @@
+using System.Reflection;
+using System.Text;
+using FluentValidation;
+using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using ContaCorrente.Api.Middleware;
 using ContaCorrente.Domain.Interfaces;
 using ContaCorrente.Domain.Services;
 using ContaCorrente.Infrastructure.Data;
-using ContaCorrente.Infrastructure.Messaging;
 using ContaCorrente.Infrastructure.Repositories;
 using ContaCorrente.Infrastructure.Services;
-using FluentValidation;
-using MediatR;
-using System.Reflection;
+using ContaCorrente.Infrastructure.Messaging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+// Swagger com suporte a JWT
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new()
     {
-        Title = "Conta Corrente API",
+        Title = "Conta Corrente API - BankMore",
         Version = "v1",
-        Description = "API para gerenciamento de contas correntes e transferências"
+        Description = "API para gerenciamento de contas correntes com autenticação JWT"
+    });
+
+    // Configuração de segurança JWT no Swagger
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header usando o esquema Bearer. Exemplo: \"Authorization: Bearer {token}\"",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
     });
 
     // Incluir comentários XML
@@ -47,7 +79,13 @@ builder.Services.AddScoped<IIdempotenciaRepository, IdempotenciaRepository>();
 
 // Services
 builder.Services.AddScoped<IPasswordService, PasswordService>();
+builder.Services.AddScoped<ICpfValidator, CpfValidator>();
+builder.Services.AddScoped<IJwtService, JwtService>();
 
+// Kafka
+builder.Services.AddSingleton<IEventPublisher, KafkaEventPublisher>();
+builder.Services.AddHostedService<KafkaEventConsumer>();
+builder.Services.AddHostedService<TarifacaoConsumerService>();
 // MediatR
 builder.Services.AddMediatR(cfg =>
 {
@@ -63,6 +101,75 @@ builder.Services.AddValidatorsFromAssembly(
 // Pipeline Behaviors
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
+// JWT Authentication
+var jwtSecretKey = builder.Configuration["Jwt:SecretKey"]
+    ?? throw new InvalidOperationException("JWT SecretKey não configurada");
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "BankMore";
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "BankMoreAPI";
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.RequireHttpsMetadata = false; // Em produção, mudar para true
+    options.SaveToken = true;
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtSecretKey)),
+        ValidateIssuer = true,
+        ValidIssuer = jwtIssuer,
+        ValidateAudience = true,
+        ValidAudience = jwtAudience,
+        ValidateLifetime = true,
+        ClockSkew = TimeSpan.Zero
+    };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnAuthenticationFailed = context =>
+        {
+            if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+            {
+                context.Response.Headers.Add("Token-Expired", "true");
+            }
+            return Task.CompletedTask;
+        },
+        OnChallenge = context =>
+        {
+            context.HandleResponse();
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            context.Response.ContentType = "application/json";
+
+            var result = System.Text.Json.JsonSerializer.Serialize(new
+            {
+                message = "Token inválido ou ausente",
+                errorType = "INVALID_TOKEN"
+            });
+
+            return context.Response.WriteAsync(result);
+        },
+        OnForbidden = context =>
+        {
+            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+            context.Response.ContentType = "application/json";
+
+            var result = System.Text.Json.JsonSerializer.Serialize(new
+            {
+                message = "Acesso negado",
+                errorType = "USER_UNAUTHORIZED"
+            });
+
+            return context.Response.WriteAsync(result);
+        }
+    };
+});
+
+builder.Services.AddAuthorization();
+
 // CORS
 builder.Services.AddCors(options =>
 {
@@ -73,16 +180,7 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
-// ... código existente ...
 
-// Kafka
-builder.Services.AddSingleton<IEventPublisher, KafkaEventPublisher>();
-builder.Services.AddHostedService<KafkaEventConsumer>();
-
-// Notification Service
-builder.Services.AddScoped<INotificationService, NotificationService>();
-
-// ... resto do código ...
 var app = builder.Build();
 
 // Initialize Database
@@ -109,7 +207,9 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
 
-app.UseAuthorization();
+// IMPORTANTE: A ordem é crítica!
+app.UseAuthentication(); // Primeiro autenticação
+app.UseAuthorization();  // Depois autorização
 
 app.MapControllers();
 

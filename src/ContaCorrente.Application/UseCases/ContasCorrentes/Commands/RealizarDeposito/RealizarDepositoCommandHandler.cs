@@ -1,9 +1,11 @@
-﻿using System.Text.Json;
+﻿using ContaCorrente.Domain.Entities;
+using ContaCorrente.Domain.Enums;
+using ContaCorrente.Domain.Events;
+using ContaCorrente.Domain.Exceptions;
+using ContaCorrente.Domain.Interfaces;
 using FluentResults;
 using MediatR;
-using ContaCorrente.Domain.Entities;
-using ContaCorrente.Domain.Events;
-using ContaCorrente.Domain.Interfaces;
+using System.Text.Json;
 
 namespace ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
 
@@ -44,7 +46,7 @@ public class RealizarDepositoCommandHandler : IRequestHandler<RealizarDepositoCo
 
         if (!conta.Ativo)
         {
-            return Result.Fail<string>("Conta corrente está inativa");
+            throw new DomainException("Apenas contas correntes ativas podem receber movimentação", ErrorType.INACTIVE_ACCOUNT);
         }
 
         // Criar movimento de crédito

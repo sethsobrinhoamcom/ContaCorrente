@@ -1,0 +1,392 @@
+{
+  "info": {
+    "name": "BankMore API - Completo com JWT",
+    "description": "Collection completa da API BankMore com autenticação JWT",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{jwt_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "id_conta_1",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "id_conta_2",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Health Check",
+      "item": [
+        {
+          "name": "API Health",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": ["{{base_url}}"],
+              "path": ["health"]
+            }
+          }
+        },
+        {
+          "name": "Kafka Health",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/health",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "2. Autenticação",
+      "item": [
+        {
+          "name": "Criar Conta",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 201) {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('id_conta_1', jsonData.idContaCorrente);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numero\": 12345,\n  \"cpf\": \"12345678901\",\n  \"nome\": \"João Silva\",\n  \"senha\": \"senha123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente"]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "if (pm.response.code === 200) {",
+                  "    var jsonData = pm.response.json();",
+                  "    pm.collectionVariables.set('jwt_token', jsonData.token);",
+                  "    console.log('Token JWT salvo:', jsonData.token.substring(0, 50) + '...');",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cpfOrNumeroConta\": \"12345678901\",\n  \"senha\": \"senha123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "auth", "login"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "3. Conta Corrente",
+      "item": [
+        {
+          "name": "Obter Conta",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/{{id_conta_1}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "{{id_conta_1}}"]
+            }
+          }
+        },
+        {
+          "name": "Consultar Saldo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/saldo",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "saldo"]
+            }
+          }
+        },
+        {
+          "name": "Obter Extrato",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/extrato",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "extrato"]
+            }
+          }
+        },
+        {
+          "name": "Realizar Depósito",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{$guid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"valor\": 500.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/deposito",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "deposito"]
+            }
+          }
+        },
+        {
+          "name": "Realizar Saque",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{$guid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"valor\": 100.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/saque",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "saque"]
+            }
+          }
+        },
+        {
+          "name": "Inativar Conta",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"senha\": \"senha123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/inativar",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "inativar"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "4. Transferência",
+      "item": [
+        {
+          "name": "Realizar Transferência",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-Idempotency-Key",
+                "value": "{{$guid}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idContaCorrenteDestino\": \"{{id_conta_2}}\",\n  \"valor\": 250.00\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/transferencia",
+              "host": ["{{base_url}}"],
+              "path": ["api", "transferencia"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "5. Kafka Monitoring",
+      "item": [
+        {
+          "name": "Listar Tópicos",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/topics",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "topics"]
+            }
+          }
+        },
+        {
+          "name": "Listar Consumer Groups",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/consumer-groups",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "consumer-groups"]
+            }
+          }
+        },
+        {
+          "name": "Consumer Group Lag",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/kafkamonitoring/consumer-groups/contacorrente-consumer-group/lag",
+              "host": ["{{base_url}}"],
+              "path": ["api", "kafkamonitoring", "consumer-groups", "contacorrente-consumer-group", "lag"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "6. Testes de Segurança",
+      "item": [
+        {
+          "name": "Acesso sem Token (deve falhar)",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/saldo",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "saldo"]
+            }
+          }
+        },
+        {
+          "name": "Token Inválido (deve falhar)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "token_invalido_123",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/contacorrente/saldo",
+              "host": ["{{base_url}}"],
+              "path": ["api", "contacorrente", "saldo"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,9 +1,11 @@
-﻿using System.Text.Json;
+﻿using ContaCorrente.Domain.Entities;
+using ContaCorrente.Domain.Enums;
+using ContaCorrente.Domain.Events;
+using ContaCorrente.Domain.Exceptions;
+using ContaCorrente.Domain.Interfaces;
 using FluentResults;
 using MediatR;
-using ContaCorrente.Domain.Entities;
-using ContaCorrente.Domain.Events;
-using ContaCorrente.Domain.Interfaces;
+using System.Text.Json;
 
 namespace ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarSaque;
 
@@ -47,7 +49,7 @@ public class RealizarSaqueCommandHandler : IRequestHandler<RealizarSaqueCommand,
 
         if (!conta.Ativo)
         {
-            return Result.Fail<string>("Conta corrente está inativa");
+            throw new DomainException("Apenas contas correntes ativas podem realizar saques", ErrorType.INACTIVE_ACCOUNT);
         }
 
         // Verificar saldo

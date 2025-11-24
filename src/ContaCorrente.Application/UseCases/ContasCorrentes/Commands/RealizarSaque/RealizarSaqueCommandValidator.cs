@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarSaque;
 
 namespace ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarSaque;
 
@@ -13,7 +14,9 @@ public class RealizarSaqueCommandValidator : AbstractValidator<RealizarSaqueComm
         RuleFor(x => x.Valor)
             .GreaterThan(0)
             .WithMessage("Valor do saque deve ser maior que zero")
+            .WithErrorCode("INVALID_VALUE")
             .LessThanOrEqualTo(5000)
-            .WithMessage("Valor do saque não pode exceder R$ 5.000,00 por operação");
+            .WithMessage("Valor do saque não pode exceder R$ 5.000,00 por operação")
+            .WithErrorCode("INVALID_VALUE");
     }
 }

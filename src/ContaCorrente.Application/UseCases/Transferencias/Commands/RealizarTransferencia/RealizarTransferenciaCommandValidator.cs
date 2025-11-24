@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using ContaCorrente.Application.UseCases.Transferencias.Commands.RealizarTransferencia;
 
 namespace ContaCorrente.Application.UseCases.Transferencias.Commands.RealizarTransferencia;
 
@@ -16,7 +17,8 @@ public class RealizarTransferenciaCommandValidator : AbstractValidator<RealizarT
 
         RuleFor(x => x.Valor)
             .GreaterThan(0)
-            .WithMessage("Valor deve ser maior que zero");
+            .WithMessage("Valor deve ser maior que zero")
+            .WithErrorCode("INVALID_VALUE");
 
         RuleFor(x => x)
             .Must(x => x.IdContaCorrenteOrigem != x.IdContaCorrenteDestino)

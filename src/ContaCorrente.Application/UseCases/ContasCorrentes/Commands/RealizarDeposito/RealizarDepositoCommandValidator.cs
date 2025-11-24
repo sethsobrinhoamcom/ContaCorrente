@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
 
 namespace ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
 
@@ -13,7 +14,9 @@ public class RealizarDepositoCommandValidator : AbstractValidator<RealizarDeposi
         RuleFor(x => x.Valor)
             .GreaterThan(0)
             .WithMessage("Valor do depósito deve ser maior que zero")
+            .WithErrorCode("INVALID_VALUE")
             .LessThanOrEqualTo(10000)
-            .WithMessage("Valor do depósito não pode exceder R$ 10.000,00 por operação");
+            .WithMessage("Valor do depósito não pode exceder R$ 10.000,00 por operação")
+            .WithErrorCode("INVALID_VALUE");
     }
 }

@@ -10,6 +10,10 @@ public class CriarContaCorrenteCommandValidator : AbstractValidator<CriarContaCo
             .GreaterThan(0)
             .WithMessage("Número da conta deve ser maior que zero");
 
+        RuleFor(x => x.Cpf)
+            .NotEmpty()
+            .WithMessage("CPF é obrigatório");
+
         RuleFor(x => x.Nome)
             .NotEmpty()
             .WithMessage("Nome é obrigatório")

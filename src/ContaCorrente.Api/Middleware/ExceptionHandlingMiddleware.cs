@@ -1,6 +1,8 @@
 ﻿using System.Net;
 using System.Text.Json;
 using FluentValidation;
+using ContaCorrente.Domain.Exceptions;
+using ContaCorrente.Api.Models.Response;
 
 namespace ContaCorrente.Api.Middleware;
 
@@ -40,30 +42,50 @@ public class ExceptionHandlingMiddleware
 
         switch (exception)
         {
+            case DomainException domainException:
+                response.StatusCode = domainException.ErrorType switch
+                {
+                    Domain.Enums.ErrorType.INVALID_DOCUMENT => (int)HttpStatusCode.BadRequest,
+                    Domain.Enums.ErrorType.USER_UNAUTHORIZED => (int)HttpStatusCode.Unauthorized,
+                    Domain.Enums.ErrorType.INVALID_ACCOUNT => (int)HttpStatusCode.BadRequest,
+                    Domain.Enums.ErrorType.INACTIVE_ACCOUNT => (int)HttpStatusCode.BadRequest,
+                    Domain.Enums.ErrorType.INVALID_VALUE => (int)HttpStatusCode.BadRequest,
+                    Domain.Enums.ErrorType.INVALID_TYPE => (int)HttpStatusCode.BadRequest,
+                    Domain.Enums.ErrorType.INSUFFICIENT_BALANCE => (int)HttpStatusCode.BadRequest,
+                    Domain.Enums.ErrorType.INVALID_TOKEN => (int)HttpStatusCode.Forbidden,
+                    Domain.Enums.ErrorType.TOKEN_EXPIRED => (int)HttpStatusCode.Forbidden,
+                    _ => (int)HttpStatusCode.BadRequest
+                };
+                errorResponse.Message = domainException.Message;
+                errorResponse.ErrorType = domainException.ErrorType.ToString();
+                break;
+
             case ValidationException validationException:
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
+                errorResponse.Message = "Erro de validação";
                 errorResponse.Errors = validationException.Errors
                     .Select(e => e.ErrorMessage)
                     .ToList();
                 break;
 
-            case ArgumentException:
-                response.StatusCode = (int)HttpStatusCode.BadRequest;
-                errorResponse.Errors = new List<string> { exception.Message };
+            case UnauthorizedAccessException:
+                response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                errorResponse.Message = "Não autorizado";
+                errorResponse.ErrorType = "USER_UNAUTHORIZED";
                 break;
 
             default:
                 response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                errorResponse.Errors = new List<string> { "Ocorreu um erro interno no servidor" };
+                errorResponse.Message = "Ocorreu um erro interno no servidor";
                 break;
         }
 
-        var result = JsonSerializer.Serialize(errorResponse);
+        var result = JsonSerializer.Serialize(errorResponse, new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        });
+
         await response.WriteAsync(result);
     }
 }
 
-public class ErrorResponse
-{
-    public List<string> Errors { get; set; } = new();
-}

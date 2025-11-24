@@ -1,25 +1,33 @@
-﻿using ContaCorrente.Api.Models.Request;
-using ContaCorrente.Api.Models.Response;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.CriarContaCorrente;
+using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.InativarContaCorrente;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarSaque;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Queries.ObterContaCorrente;
 using ContaCorrente.Application.UseCases.ContasCorrentes.Queries.ObterExtrato;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+using ContaCorrente.Api.Models.Response;
+using ContaCorrente.Api.Models.Request;
 
 namespace ContaCorrente.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class ContaCorrenteController(IMediator mediator) : ControllerBase
+public class ContaCorrenteController : ControllerBase
 {
-    private readonly IMediator _mediator = mediator;
+    private readonly IMediator _mediator;
 
- 
+    public ContaCorrenteController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
 
-  
+    /// <summary>
+    /// Cria uma nova conta corrente (Público - não requer autenticação)
+    /// </summary>
     [HttpPost]
+    [AllowAnonymous]
     [ProducesResponseType(typeof(CriarContaCorrenteResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CriarConta([FromBody] CriarContaCorrenteRequest request)
@@ -27,6 +35,7 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
         var command = new CriarContaCorrenteCommand
         {
             Numero = request.Numero,
+            Cpf = request.Cpf,
             Nome = request.Nome,
             Senha = request.Senha
         };
@@ -44,9 +53,14 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
             new CriarContaCorrenteResponse { IdContaCorrente = result.Value });
     }
 
- 
+    /// <summary>
+    /// Obtém informações de uma conta corrente (Requer autenticação)
+    /// </summary>
     [HttpGet("{id}")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> ObterConta(string id)
     {
@@ -62,19 +76,64 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
     }
 
     /// <summary>
-    /// Obtém o extrato da conta corrente
+    /// Obtém o saldo da conta corrente (Requer autenticação)
     /// </summary>
-    [HttpGet("{id}/extrato")]
+    [HttpGet("saldo")]
+    [Authorize]
     [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    public async Task<IActionResult> ObterSaldo()
+    {
+        // Obter ID da conta do token
+        var idContaCorrente = User.Claims.FirstOrDefault(c => c.Type == "id_conta_corrente")?.Value;
+
+        if (string.IsNullOrEmpty(idContaCorrente))
+        {
+            return Unauthorized(new { message = "Token inválido", errorType = "INVALID_TOKEN" });
+        }
+
+        var query = new ObterContaCorrenteQuery { IdContaCorrente = idContaCorrente };
+        var result = await _mediator.Send(query);
+
+        if (result.IsFailed)
+        {
+            return NotFound(new { errors = result.Errors.Select(e => e.Message) });
+        }
+
+        return Ok(new
+        {
+            numeroConta = result.Value.Numero,
+            titular = result.Value.Nome,
+            dataHoraConsulta = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+            saldo = result.Value.Saldo
+        });
+    }
+
+    /// <summary>
+    /// Obtém o extrato da conta corrente (Requer autenticação)
+    /// </summary>
+    [HttpGet("extrato")]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> ObterExtrato(
-        string id,
         [FromQuery] DateTime? dataInicio = null,
         [FromQuery] DateTime? dataFim = null)
     {
+        // Obter ID da conta do token
+        var idContaCorrente = User.Claims.FirstOrDefault(c => c.Type == "id_conta_corrente")?.Value;
+
+        if (string.IsNullOrEmpty(idContaCorrente))
+        {
+            return Unauthorized(new { message = "Token inválido", errorType = "INVALID_TOKEN" });
+        }
+
         var query = new ObterExtratoQuery
         {
-            IdContaCorrente = id,
+            IdContaCorrente = idContaCorrente,
             DataInicio = dataInicio,
             DataFim = dataFim
         };
@@ -88,20 +147,36 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
 
         return Ok(result.Value);
     }
+
     /// <summary>
-    /// Realiza um depósito na conta corrente
+    /// Realiza um depósito na conta corrente (Requer autenticação)
     /// </summary>
-    [HttpPost("{id}/deposito")]
+    [HttpPost("deposito")]
+    [Authorize]
     [ProducesResponseType(typeof(RealizarDepositoResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> RealizarDeposito(
-        string id,
         [FromBody] RealizarDepositoRequest request,
         [FromHeader(Name = "X-Idempotency-Key")] string? chaveIdempotencia = null)
     {
+        // Obter ID da conta do token ou usar o fornecido
+        var idContaCorrenteToken = User.Claims.FirstOrDefault(c => c.Type == "id_conta_corrente")?.Value;
+
+        if (string.IsNullOrEmpty(idContaCorrenteToken))
+        {
+            return Unauthorized(new { message = "Token inválido", errorType = "INVALID_TOKEN" });
+        }
+
+        // Se não fornecer conta, usa a do token
+        var idContaCorrente = string.IsNullOrEmpty(request.IdContaCorrente)
+            ? idContaCorrenteToken
+            : request.IdContaCorrente;
+
         var command = new RealizarDepositoCommand
         {
-            IdContaCorrente = id,
+            IdContaCorrente = idContaCorrente,
             Valor = request.Valor,
             ChaveIdempotencia = chaveIdempotencia
         };
@@ -121,19 +196,29 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
     }
 
     /// <summary>
-    /// Realiza um saque da conta corrente
+    /// Realiza um saque da conta corrente (Requer autenticação)
     /// </summary>
-    [HttpPost("{id}/saque")]
+    [HttpPost("saque")]
+    [Authorize]
     [ProducesResponseType(typeof(RealizarSaqueResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
     public async Task<IActionResult> RealizarSaque(
-        string id,
         [FromBody] RealizarSaqueRequest request,
         [FromHeader(Name = "X-Idempotency-Key")] string? chaveIdempotencia = null)
     {
+        // Obter ID da conta do token
+        var idContaCorrente = User.Claims.FirstOrDefault(c => c.Type == "id_conta_corrente")?.Value;
+
+        if (string.IsNullOrEmpty(idContaCorrente))
+        {
+            return Unauthorized(new { message = "Token inválido", errorType = "INVALID_TOKEN" });
+        }
+
         var command = new RealizarSaqueCommand
         {
-            IdContaCorrente = id,
+            IdContaCorrente = idContaCorrente,
             Valor = request.Valor,
             ChaveIdempotencia = chaveIdempotencia
         };
@@ -152,13 +237,39 @@ public class ContaCorrenteController(IMediator mediator) : ControllerBase
         });
     }
 
-    // Request/Response Models
-  
+    /// <summary>
+    /// Inativa uma conta corrente (Requer autenticação)
+    /// </summary>
+    [HttpPost("inativar")]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status403Forbidden)]
+    public async Task<IActionResult> InativarConta([FromBody] InativarContaRequest request)
+    {
+        // Obter ID da conta do token
+        var idContaCorrente = User.Claims.FirstOrDefault(c => c.Type == "id_conta_corrente")?.Value;
 
-  
+        if (string.IsNullOrEmpty(idContaCorrente))
+        {
+            return Unauthorized(new { message = "Token inválido", errorType = "INVALID_TOKEN" });
+        }
 
-   
+        var command = new InativarContaCorrenteCommand
+        {
+            IdContaCorrente = idContaCorrente,
+            Senha = request.Senha
+        };
 
-  
+        var result = await _mediator.Send(command);
+
+        if (result.IsFailed)
+        {
+            return BadRequest(new { errors = result.Errors.Select(e => e.Message) });
+        }
+
+        return NoContent();
+    }
 }
 

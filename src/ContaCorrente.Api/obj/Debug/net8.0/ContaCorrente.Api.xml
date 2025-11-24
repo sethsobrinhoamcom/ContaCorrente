@@ -4,19 +4,44 @@
         <name>ContaCorrente.Api</name>
     </assembly>
     <members>
-        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.ObterExtrato(System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+        <member name="M:ContaCorrente.Api.Controllers.AuthController.Login(ContaCorrente.Api.Controllers.LoginRequest)">
             <summary>
-            Obtém o extrato da conta corrente
+            Realiza login e retorna token JWT
             </summary>
         </member>
-        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.RealizarDeposito(System.String,ContaCorrente.Api.Models.Request.RealizarDepositoRequest,System.String)">
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.CriarConta(ContaCorrente.Api.Models.Request.CriarContaCorrenteRequest)">
             <summary>
-            Realiza um depósito na conta corrente
+            Cria uma nova conta corrente (Público - não requer autenticação)
             </summary>
         </member>
-        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.RealizarSaque(System.String,ContaCorrente.Api.Models.Request.RealizarSaqueRequest,System.String)">
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.ObterConta(System.String)">
             <summary>
-            Realiza um saque da conta corrente
+            Obtém informações de uma conta corrente (Requer autenticação)
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.ObterSaldo">
+            <summary>
+            Obtém o saldo da conta corrente (Requer autenticação)
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.ObterExtrato(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Obtém o extrato da conta corrente (Requer autenticação)
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.RealizarDeposito(ContaCorrente.Api.Models.Request.RealizarDepositoRequest,System.String)">
+            <summary>
+            Realiza um depósito na conta corrente (Requer autenticação)
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.RealizarSaque(ContaCorrente.Api.Models.Request.RealizarSaqueRequest,System.String)">
+            <summary>
+            Realiza um saque da conta corrente (Requer autenticação)
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.ContaCorrenteController.InativarConta(ContaCorrente.Api.Models.Request.InativarContaRequest)">
+            <summary>
+            Inativa uma conta corrente (Requer autenticação)
             </summary>
         </member>
         <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetKafkaHealth">
@@ -52,6 +77,11 @@
         <member name="M:ContaCorrente.Api.Controllers.KafkaMonitoringController.GetConsumerGroupLag(System.String)">
             <summary>
             Obtém lag dos consumer groups
+            </summary>
+        </member>
+        <member name="M:ContaCorrente.Api.Controllers.TransferenciaController.RealizarTransferencia(ContaCorrente.Api.Models.Request.RealizarTransferenciaRequest,System.String)">
+            <summary>
+            Realiza uma transferência entre contas (Requer autenticação)
             </summary>
         </member>
     </members>

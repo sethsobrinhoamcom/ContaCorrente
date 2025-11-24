@@ -5,6 +5,7 @@ public interface IContaCorrenteRepository
 {
     Task<ContaCorrenteEntity?> ObterPorIdAsync(string id);
     Task<ContaCorrenteEntity?> ObterPorNumeroAsync(int numero);
+    Task<ContaCorrenteEntity?> ObterPorCpfAsync(string cpf);
     Task<string> CriarAsync(ContaCorrenteEntity conta);
     Task<bool> AtualizarAsync(ContaCorrenteEntity conta);
     Task<decimal> ObterSaldoAsync(string idContaCorrente);

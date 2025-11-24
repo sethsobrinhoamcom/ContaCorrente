@@ -12,6 +12,7 @@ public class RealizarTransferenciaTests
     private readonly Mock<ITransferenciaRepository> _transferenciaRepositoryMock;
     private readonly Mock<IIdempotenciaRepository> _idempotenciaRepositoryMock;
     private readonly Mock<ITarifaRepository> _tarifaRepositoryMock;
+    private readonly Mock<IEventPublisher> _eventPublisherMock; // ADICIONAR
     private readonly RealizarTransferenciaCommandHandler _handler;
 
     public RealizarTransferenciaTests()
@@ -20,12 +21,14 @@ public class RealizarTransferenciaTests
         _transferenciaRepositoryMock = new Mock<ITransferenciaRepository>();
         _idempotenciaRepositoryMock = new Mock<IIdempotenciaRepository>();
         _tarifaRepositoryMock = new Mock<ITarifaRepository>();
+        _eventPublisherMock = new Mock<IEventPublisher>(); // ADICIONAR
 
         _handler = new RealizarTransferenciaCommandHandler(
             _contaRepositoryMock.Object,
             _transferenciaRepositoryMock.Object,
             _idempotenciaRepositoryMock.Object,
-            _tarifaRepositoryMock.Object);
+            _tarifaRepositoryMock.Object,
+            _eventPublisherMock.Object); // ADICIONAR
     }
 
     [Fact]
@@ -72,9 +75,26 @@ public class RealizarTransferenciaTests
             .Setup(x => x.ObterSaldoAsync("origem-id"))
             .ReturnsAsync(200m); // Saldo suficiente
 
+        _contaRepositoryMock
+            .Setup(x => x.CriarMovimentoAsync(It.IsAny<Movimento>()))
+            .ReturnsAsync("movimento-123");
+
         _transferenciaRepositoryMock
             .Setup(x => x.CriarAsync(It.IsAny<Transferencia>()))
             .ReturnsAsync("transferencia-id");
+
+        _tarifaRepositoryMock
+            .Setup(x => x.CriarAsync(It.IsAny<Tarifa>()))
+            .ReturnsAsync("tarifa-123");
+
+        // ADICIONAR: Mock do EventPublisher
+        _eventPublisherMock
+            .Setup(x => x.PublishAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<object>(),
+                It.IsAny<CancellationToken>()))
+            .Returns(Task.CompletedTask);
 
         // Act
         var result = await _handler.Handle(command, CancellationToken.None);
@@ -89,6 +109,15 @@ public class RealizarTransferenciaTests
 
         _tarifaRepositoryMock.Verify(
             x => x.CriarAsync(It.IsAny<Tarifa>()),
+            Times.Once);
+
+        // ADICIONAR: Verificar que o evento foi publicado
+        _eventPublisherMock.Verify(
+            x => x.PublishAsync(
+                "transferencias",
+                It.IsAny<string>(),
+                It.IsAny<object>(),
+                It.IsAny<CancellationToken>()),
             Times.Once);
     }
 
@@ -137,6 +166,15 @@ public class RealizarTransferenciaTests
         _transferenciaRepositoryMock.Verify(
             x => x.CriarAsync(It.IsAny<Transferencia>()),
             Times.Never);
+
+        // Evento não deve ser publicado em caso de erro
+        _eventPublisherMock.Verify(
+            x => x.PublishAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<object>(),
+                It.IsAny<CancellationToken>()),
+            Times.Never);
     }
 
     [Fact]
@@ -171,5 +209,41 @@ public class RealizarTransferenciaTests
         _transferenciaRepositoryMock.Verify(
             x => x.CriarAsync(It.IsAny<Transferencia>()),
             Times.Never);
+
+        // Evento não deve ser publicado quando usa idempotência
+        _eventPublisherMock.Verify(
+            x => x.PublishAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<object>(),
+                It.IsAny<CancellationToken>()),
+            Times.Never);
+    }
+
+    [Fact]
+    public async Task Handle_QuandoContaOrigemInativa_DeveLancarExcecao()
+    {
+        // Arrange
+        var command = new RealizarTransferenciaCommand
+        {
+            IdContaCorrenteOrigem = "origem-id",
+            IdContaCorrenteDestino = "destino-id",
+            Valor = 100m
+        };
+
+        var contaOrigem = new ContaCorrenteEntity
+        {
+            IdContaCorrente = "origem-id",
+            Ativo = false // INATIVA
+        };
+
+        _contaRepositoryMock
+            .Setup(x => x.ObterPorIdAsync("origem-id"))
+            .ReturnsAsync(contaOrigem);
+
+        // Act & Assert
+        var result = await _handler.Handle(command, CancellationToken.None);
+
+        result.IsFailed.Should().BeTrue();
     }
 }

@@ -100,4 +100,11 @@ public class ContaCorrenteRepository : IContaCorrenteRepository
 
         return movimento.IdMovimento;
     }
+    public async Task<ContaCorrenteEntity?> ObterPorCpfAsync(string cpf)
+    {
+        const string sql = "SELECT * FROM contacorrente WHERE cpf = @Cpf";
+
+        using var connection = _context.CreateConnection();
+        return await connection.QueryFirstOrDefaultAsync<ContaCorrenteEntity>(sql, new { Cpf = cpf });
+    }
 }
