@@ -1,9 +1,11 @@
-﻿using FluentAssertions;
-using Moq;
-using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
+﻿using ContaCorrente.Application.UseCases.ContasCorrentes.Commands.RealizarDeposito;
 using ContaCorrente.Domain.Entities;
+using ContaCorrente.Domain.Enums;
 using ContaCorrente.Domain.Events;
+using ContaCorrente.Domain.Exceptions;
 using ContaCorrente.Domain.Interfaces;
+using FluentAssertions;
+using Moq;
 
 namespace ContaCorrente.Tests.UseCases;
 
@@ -84,7 +86,7 @@ public class RealizarDepositoTests
     }
 
     [Fact]
-    public async Task Handle_QuandoContaInativa_DeveRetornarErro()
+    public async Task Handle_QuandoContaInativa_DeveLancarExcecao()
     {
         // Arrange
         var command = new RealizarDepositoCommand
@@ -104,17 +106,24 @@ public class RealizarDepositoTests
             .ReturnsAsync(conta);
 
         // Act
-        var result = await _handler.Handle(command, CancellationToken.None);
+        Func<Task> act = async () => await _handler.Handle(command, CancellationToken.None);
 
         // Assert
-        result.IsFailed.Should().BeTrue();
-        result.Errors.Should().Contain(e => e.Message == "Conta corrente está inativa");
+        await act.Should().ThrowAsync<DomainException>()
+            .Where(e => e.ErrorType == ErrorType.INACTIVE_ACCOUNT);
 
         _contaRepositoryMock.Verify(
             x => x.CriarMovimentoAsync(It.IsAny<Movimento>()),
             Times.Never);
-    }
 
+        _eventPublisherMock.Verify(
+            x => x.PublishAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<object>(),
+                It.IsAny<CancellationToken>()),
+            Times.Never);
+    }
     [Theory]
     [InlineData(0)]
     [InlineData(-100)]

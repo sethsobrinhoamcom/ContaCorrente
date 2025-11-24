@@ -199,3 +199,4 @@ C:\Users\seth.sobrinho\source\repos\TesteAilos\ContaCorrente\src\ContaCorrente.A
 C:\Users\seth.sobrinho\source\repos\TesteAilos\ContaCorrente\src\ContaCorrente.Api\obj\Debug\net8.0\ContaCorrente.Api.pdb
 C:\Users\seth.sobrinho\source\repos\TesteAilos\ContaCorrente\src\ContaCorrente.Api\obj\Debug\net8.0\ContaCorrente.Api.genruntimeconfig.cache
 C:\Users\seth.sobrinho\source\repos\TesteAilos\ContaCorrente\src\ContaCorrente.Api\obj\Debug\net8.0\ref\ContaCorrente.Api.dll
+C:\Users\seth.sobrinho\source\repos\TesteAilos\ContaCorrente\src\ContaCorrente.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -1,8 +1,10 @@
-﻿using FluentAssertions;
-using Moq;
-using ContaCorrente.Application.UseCases.Transferencias.Commands.RealizarTransferencia;
+﻿using ContaCorrente.Application.UseCases.Transferencias.Commands.RealizarTransferencia;
 using ContaCorrente.Domain.Entities;
+using ContaCorrente.Domain.Enums;
+using ContaCorrente.Domain.Exceptions;
 using ContaCorrente.Domain.Interfaces;
+using FluentAssertions;
+using Moq;
 
 namespace ContaCorrente.Tests.UseCases;
 
@@ -241,9 +243,23 @@ public class RealizarTransferenciaTests
             .Setup(x => x.ObterPorIdAsync("origem-id"))
             .ReturnsAsync(contaOrigem);
 
-        // Act & Assert
-        var result = await _handler.Handle(command, CancellationToken.None);
+        // Act
+        Func<Task> act = async () => await _handler.Handle(command, CancellationToken.None);
 
-        result.IsFailed.Should().BeTrue();
+        // Assert
+        await act.Should().ThrowAsync<DomainException>()
+            .Where(e => e.ErrorType == ErrorType.INACTIVE_ACCOUNT);
+
+        _transferenciaRepositoryMock.Verify(
+            x => x.CriarAsync(It.IsAny<Transferencia>()),
+            Times.Never);
+
+        _eventPublisherMock.Verify(
+            x => x.PublishAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<object>(),
+                It.IsAny<CancellationToken>()),
+            Times.Never);
     }
 }

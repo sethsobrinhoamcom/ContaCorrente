@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\realizartransferenciatests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizartransferenciatests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\realizardepositotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizardepositotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\criarcontacorrentetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\criarcontacorrentetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\repositories\\contacorrenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\repositories\\contacorrenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\tarifacaoconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\messaging\\tarifacaoconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\kafkaeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\messaging\\kafkaeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\realizartransferenciatests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizartransferenciatests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07819AC0-2F2C-4F91-9002-14C2F7FBCB23}|src\\ContaCorrente.Tarifas\\ContaCorrente.Tarifas.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.tarifas\\service\\tarifaconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\transferencias\\commands\\realizartransferencia\\realizartransferenciacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\transferencias\\commands\\realizartransferencia\\realizartransferenciacommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\tarifacaoconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\messaging\\tarifacaoconsumerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\kafkaeventpublisher .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,10 +123,6 @@
       "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\controllers\\contacorrentecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.api\\models\\request\\inativarcontarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CB833793-56FD-4F44-90FC-E94D7A08B091}|src\\ContaCorrente.Api\\ContaCorrente.Api.csproj|solutionrelative:src\\contacorrente.api\\models\\request\\inativarcontarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -147,10 +167,6 @@
       "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\data\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\repositories\\contacorrenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\repositories\\contacorrenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.domain\\interfaces\\icontacorrenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF470F-7170-426B-8EEB-1AF97E4D3120}|src\\ContaCorrente.Domain\\ContaCorrente.Domain.csproj|solutionrelative:src\\contacorrente.domain\\interfaces\\icontacorrenterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -177,10 +193,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|solutionrelative:src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\criarcontacorrente\\criarcontacorrentecommand .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -235,16 +247,8 @@
       "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizarsaquetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\realizardepositotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\realizardepositotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\integration\\kafkaintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\integration\\kafkaintegrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\tests\\contacorrente.tests\\usecases\\criarcontacorrentetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30F9AF27-4C2C-477E-9810-41B53F04EC45}|tests\\ContaCorrente.Tests\\ContaCorrente.Tests.csproj|solutionrelative:tests\\contacorrente.tests\\usecases\\criarcontacorrentetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -257,10 +261,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\kafka-deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:k8s\\kafka-deployment.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.infrastructure\\messaging\\kafkaeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD8B3312-BF0B-4CB5-9E4E-9AD5850446C4}|src\\ContaCorrente.Infrastructure\\ContaCorrente.Infrastructure.csproj|solutionrelative:src\\contacorrente.infrastructure\\messaging\\kafkaeventconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6141D377-5CFB-4C9B-AA00-8CA674FEFD67}|src\\ContaCorrente.Application\\ContaCorrente.Application.csproj|c:\\users\\seth.sobrinho\\source\\repos\\testeailos\\contacorrente\\src\\contacorrente.application\\usecases\\contascorrentes\\commands\\realizarsaque\\realizarsaquecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -306,20 +306,85 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ContaCorrenteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T12:28:14.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CriarContaCorrenteTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAiwIQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:45:43.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RealizarDepositoTests.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAiwH4AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:54:18.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "RealizarTransferenciaTests.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarTransferenciaTests.cs",
               "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\RealizarTransferenciaTests.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarTransferenciaTests.cs",
-              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\RealizarTransferenciaTests.cs",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAuwPgAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarTransferenciaTests.cs*",
+              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\RealizarTransferenciaTests.cs*",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAiwAcBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T12:46:51.124Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
+              "Title": "ContaCorrenteController.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowCoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-20T03:01:21.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CriarContaCorrenteCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwEEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T12:18:49.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "RealizarTransferenciaCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandHandler.cs",
@@ -332,20 +397,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "src\\ContaCorrente.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-24T04:31:30.355Z",
+              "DocumentIndex": 6,
+              "Title": "TarifacaoConsumerService.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T12:59:50Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "KafkaEventConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwCgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T03:36:54.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "docker-compose.yml",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
@@ -358,7 +436,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\ContaCorrente.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-24T04:31:30.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "TarifaConsumerService.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Tarifas\\Service\\TarifaConsumerService.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Tarifas\\Service\\TarifaConsumerService.cs",
@@ -371,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Program.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Program.cs",
@@ -384,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Tarifas\\Program.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Tarifas\\Program.cs",
@@ -397,20 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TarifacaoConsumerService.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
-              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
-              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Messaging\\TarifacaoConsumerService.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAUwIcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T12:59:50Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "TransferenciaRealizadaEvent.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Tarifas\\Models\\TransferenciaRealizadaEvent.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Tarifas\\Models\\TransferenciaRealizadaEvent.cs",
@@ -423,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Tarifas\\appsettings.json",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Tarifas\\appsettings.json",
@@ -436,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "ContaCorrente.Tarifas",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Tarifas\\ContaCorrente.Tarifas.csproj",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Tarifas\\ContaCorrente.Tarifas.csproj",
@@ -449,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "KafkaEventPublisher .cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventPublisher .cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventPublisher .cs",
@@ -462,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "TarifacaoRealizadaEvent.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Tarifas\\Models\\TarifacaoRealizadaEvent.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Tarifas\\Models\\TarifacaoRealizadaEvent.cs",
@@ -475,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\appsettings.json",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\appsettings.json",
@@ -488,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "LoginTests.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\LoginTests.cs",
               "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\LoginTests.cs",
@@ -500,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "RealizarDepositoCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandHandler.cs",
@@ -512,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "RealizarTransferenciaCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\Transferencias\\Commands\\RealizarTransferencia\\RealizarTransferenciaCommandValidator.cs",
@@ -524,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "RealizarSaqueCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandHandler.cs",
@@ -536,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "RealizarDepositoCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarDeposito\\RealizarDepositoCommandValidator.cs",
@@ -548,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "TransferenciaController .cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\TransferenciaController .cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\TransferenciaController .cs",
@@ -560,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "RealizarTransferenciaRequest.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Request\\RealizarTransferenciaRequest.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Request\\RealizarTransferenciaRequest.cs",
@@ -572,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "RealizarSaqueCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\RealizarSaque\\RealizarSaqueCommandValidator.cs",
@@ -584,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "RealizarTransferenciaResponse.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\RealizarTransferenciaResponse.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Response\\RealizarTransferenciaResponse.cs",
@@ -596,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\appsettings.Development.json",
@@ -608,19 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ContaCorrenteController.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
-              "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
-              "RelativeToolTip": "src\\ContaCorrente.Api\\Controllers\\ContaCorrenteController.cs",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAEwBMBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T03:01:21.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "InativarContaRequest.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Request\\InativarContaRequest.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Request\\InativarContaRequest.cs",
@@ -632,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "RealizarDepositoRequest.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Request\\RealizarDepositoRequest.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Request\\RealizarDepositoRequest.cs",
@@ -644,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "CriarContaCorrenteRequest.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Request\\CriarContaCorrenteRequest.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Request\\CriarContaCorrenteRequest.cs",
@@ -656,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "RealizarSaqueRequest.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Request\\RealizarSaqueRequest.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Request\\RealizarSaqueRequest.cs",
@@ -668,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "CriarContaCorrenteResponse.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\CriarContaCorrenteResponse.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Response\\CriarContaCorrenteResponse.cs",
@@ -680,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\AuthController.cs",
@@ -692,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "RealizarSaqueResponse.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\RealizarSaqueResponse.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Response\\RealizarSaqueResponse.cs",
@@ -704,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "RealizarDepositoResponse.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\RealizarDepositoResponse.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Response\\RealizarDepositoResponse.cs",
@@ -716,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "ExceptionHandlingMiddleware.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Middleware\\ExceptionHandlingMiddleware.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Middleware\\ExceptionHandlingMiddleware.cs",
@@ -728,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "ErrorResponse.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Models\\Response\\ErrorResponse.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Models\\Response\\ErrorResponse.cs",
@@ -740,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "DatabaseInitializer.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Data\\DatabaseInitializer.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Data\\DatabaseInitializer.cs",
@@ -752,19 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ContaCorrenteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
-              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
-              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Repositories\\ContaCorrenteRepository.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwGwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T12:28:14.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "IContaCorrenteRepository.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Interfaces\\IContaCorrenteRepository.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Interfaces\\IContaCorrenteRepository.cs",
@@ -776,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "InativarContaCorrenteCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\InativarContaCorrente\\InativarContaCorrenteCommandValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\InativarContaCorrente\\InativarContaCorrenteCommandValidator.cs",
@@ -788,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "InativarContaCorrenteCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\InativarContaCorrente\\InativarContaCorrenteCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\InativarContaCorrente\\InativarContaCorrenteCommandHandler.cs",
@@ -800,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "InativarContaCorrenteCommand.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\InativarContaCorrente\\InativarContaCorrenteCommand.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\InativarContaCorrente\\InativarContaCorrenteCommand.cs",
@@ -812,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "LoginCommandHandler.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\Auth\\Commands\\Login\\LoginCommandHandler.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\Auth\\Commands\\Login\\LoginCommandHandler.cs",
@@ -824,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "LoginCommand.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\Auth\\Commands\\Login\\LoginCommand.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\Auth\\Commands\\Login\\LoginCommand.cs",
@@ -836,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "CriarContaCorrenteCommandValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandValidator.cs",
@@ -848,19 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "CriarContaCorrenteCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
-              "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
-              "RelativeToolTip": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommandHandler.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA0wEUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T12:18:49.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "CriarContaCorrenteCommand .cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommand .cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Application\\UseCases\\ContasCorrentes\\Commands\\CriarContaCorrente\\CriarContaCorrenteCommand .cs",
@@ -872,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Services\\JwtService.cs",
@@ -884,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "IJwtService.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Services\\IJwtService.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Services\\IJwtService.cs",
@@ -896,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "ErrorType.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Enums\\ErrorType.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Enums\\ErrorType.cs",
@@ -908,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "DomainException.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Exceptions\\DomainException.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Exceptions\\DomainException.cs",
@@ -920,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "CpfValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Services\\CpfValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Services\\CpfValidator.cs",
@@ -932,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "ICpfValidator.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Services\\ICpfValidator.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Services\\ICpfValidator.cs",
@@ -944,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "ContaCorrenteEntity.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Domain\\Entities\\ContaCorrenteEntity.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Domain\\Entities\\ContaCorrenteEntity.cs",
@@ -956,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Services\\NotificationService.cs",
@@ -968,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "KafkaMonitoringController.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Api\\Controllers\\KafkaMonitoringController.cs",
               "RelativeDocumentMoniker": "src\\ContaCorrente.Api\\Controllers\\KafkaMonitoringController.cs",
@@ -980,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -993,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "KafkaEventPublisherTests.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\Infrastructure\\KafkaEventPublisherTests.cs",
               "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\Infrastructure\\KafkaEventPublisherTests.cs",
@@ -1005,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "RealizarSaqueTests.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarSaqueTests.cs",
               "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\RealizarSaqueTests.cs",
@@ -1017,19 +1059,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "RealizarDepositoTests.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
-              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
-              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\RealizarDepositoTests.cs",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAUwIsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T03:54:18.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 61,
               "Title": "KafkaIntegrationTests.cs",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\Integration\\KafkaIntegrationTests.cs",
               "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\Integration\\KafkaIntegrationTests.cs",
@@ -1041,19 +1071,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "CriarContaCorrenteTests.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
-              "RelativeDocumentMoniker": "tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
-              "RelativeToolTip": "tests\\ContaCorrente.Tests\\UseCases\\CriarContaCorrenteTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T03:45:43.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "deployment.yml",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\deployment.yml",
               "RelativeDocumentMoniker": "k8s\\deployment.yml",
@@ -1066,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "configmap.yml",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\configmap.yml",
               "RelativeDocumentMoniker": "k8s\\configmap.yml",
@@ -1079,7 +1097,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "kafka-deployment.yml",
               "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\k8s\\kafka-deployment.yml",
               "RelativeDocumentMoniker": "k8s\\kafka-deployment.yml",
@@ -1089,18 +1107,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-11-24T03:41:45.99Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "KafkaEventConsumer.cs",
-              "DocumentMoniker": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
-              "RelativeDocumentMoniker": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
-              "ToolTip": "C:\\Users\\seth.sobrinho\\source\\repos\\TesteAilos\\ContaCorrente\\src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
-              "RelativeToolTip": "src\\ContaCorrente.Infrastructure\\Messaging\\KafkaEventConsumer.cs",
-              "ViewState": "AgIAAMQAAAAAAAAAAAAIwO4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T03:36:54.829Z"
             },
             {
               "$type": "Document",

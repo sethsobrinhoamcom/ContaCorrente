@@ -38,6 +38,7 @@ public class KafkaEventConsumer : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        await Task.Yield();
         _consumer.Subscribe(_topics);
 
         _logger.LogInformation("Kafka Consumer started. Listening to topics: {Topics}", string.Join(", ", _topics));

@@ -37,6 +37,7 @@ public class TarifacaoConsumerService : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        await Task.Yield();
         _consumer.Subscribe("tarifacoes");
         _logger.LogInformation("Consumer inscrito no tópico 'tarifacoes'");
 
